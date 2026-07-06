@@ -1,6 +1,64 @@
 ---
 title: Managing Cars
-description: View and edit your car profiles.
+description: Create and edit car profiles, track specs and race numbers, and use notes and action items to stay on top of each vehicle.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+Your car profile is the hub for everything related to a specific vehicle — specs, race history, setup sheets, parts, tyres, and services are all accessed from here.
+
+## Adding a car
+
+1. From the dashboard, select **Add Car** (or navigate to `/cars/new`).
+2. Fill in **Make** and **Model** (required), then optionally add **Year**, **Colour**, **Category**, and **Race Number**.
+3. Under **Technical Specs**, enter **Engine**, **Capacity**, **Chassis Number**, and **Starting KM** (the odometer reading when you began tracking this car in Motorlytics).
+4. Under **Racing Details**, add **Transponder** and any other racing-specific fields.
+5. Under **Registration**, record **Logbook**, **Plate**, and **COD** numbers if needed.
+6. Click **Add Car**. You will be taken directly to the new car's profile page.
+
+Amateur accounts can hold up to 2 cars. Pro and Team accounts have no limit.
+
+## Viewing and editing a car profile
+
+Navigate to a car by clicking it on the dashboard or going to `/cars/[id]`. The car page has four tabs:
+
+| Tab | What's here |
+|-----|-------------|
+| **Overview** | Car Details card, Recent Activity, Notes, Action Items |
+| **Setup** | Setup sheet templates assigned to this car |
+| **History** | Race history table |
+| **Maintenance** | Parts, Tyre Sets, and Service records |
+
+To edit car details, open the **Car Details** card on the Overview tab, click the three-dot menu (⋮) in the top-right corner of the card, and select **Edit Car**.
+
+## Personal vs team cars
+
+A car belongs to either a personal account or a team:
+
+- **Personal car** — only you can see and manage it.
+- **Team car** — visible to all team members. Team cars show the team name as a badge on the car profile. Only Team tier accounts can create team cars.
+
+## Car notes
+
+The **Notes** card on the Overview tab holds free-text notes about the car (VIN, oil spec, radio frequency, tyre pressures, etc.).
+
+1. Click **Edit** in the Notes card header.
+2. Type or paste your notes into the text area.
+3. Click **Save**.
+
+## Action items
+
+The **Action Items** card tracks to-dos for the car. Action items can also be created automatically from session notes.
+
+1. Type a task description into the **Add an action item…** field.
+2. Set the priority: **Urgent**, **Before Next Event**, or **When Convenient**.
+3. Click the **+** button to add it.
+
+To mark an item done, click the checkbox beside it or open its menu and choose **Mark Complete**. Completed items remain visible in a collapsed list at the bottom of the card and can be reopened or deleted. Action items can also be closed via a service record — see [Service Records](/cars/service-records/).
+
+## Related
+
+- [Parts and Lifecycle](/cars/parts-and-lifecycle/)
+- [Service Records](/cars/service-records/)
+- [Odometer](/cars/odometer/)
+- [Creating a Team](/teams/creating-a-team/)

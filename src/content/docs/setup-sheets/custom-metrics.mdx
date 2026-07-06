@@ -1,0 +1,83 @@
+---
+title: Custom Metrics
+description: Define your own setup metrics with custom data types, units, and validation rules.
+sidebar:
+  order: 3
+---
+
+Custom metrics let you add fields that are not covered by the built-in metric library. Once created, a custom metric appears in the Metrics Sidebar of the template editor and can be dragged into any of your custom templates. Custom metrics are available on the **Pro** and **Team** tiers.
+
+:::note[Tier limits]
+- **Pro** — up to 25 custom metrics
+- **Team** — up to 50 custom metrics
+- **Amateur** — predefined metrics only
+:::
+
+## Creating a custom metric
+
+You can create a metric from within the template editor, or from the **Create Custom Metric** dialog accessible from the Metrics Sidebar.
+
+1. Open the template editor at `/setup/configure` (via the car's **Setup** tab → edit a custom template).
+2. In the Metrics Sidebar, click **+ Create Metric**.
+3. The **Create Custom Metric** dialog opens. Fill in the fields:
+
+| Field | Required | Notes |
+|-------|----------|-------|
+| **Name** | Yes | Up to 100 characters. E.g. "Front Ride Height" |
+| **Category** | Yes | Choose from: Tyres, Suspension, Aerodynamics, Brakes, Drivetrain, Engine, Fuel, Alignment, Differential, Other |
+| **Data Type** | Yes | See data types below |
+| **Unit** | No | Short label shown next to the input, e.g. "mm", "bar", "°C" |
+| **Description** | No | Up to 500 characters; visible to you in the sidebar |
+| **Corner-Based** | No | Toggle on to capture a value per wheel (FL / FR / RL / RR) |
+
+4. Click **Create**. The new metric is added to your metric library and appears immediately in the Metrics Sidebar.
+
+## Data types
+
+| Type | Input displayed | Best for |
+|------|----------------|---------|
+| **Number** | Numeric field | Ride height, spring rate, pressure, temperature |
+| **Text** | Text field | Free-form notes per metric |
+| **Dropdown** | Select list | Predefined options (e.g., "Soft / Medium / Hard") |
+| **Yes/No** | Toggle switch | Binary flags (e.g., "Radiator blanket fitted") |
+
+For the **Dropdown** type, enter each option on a separate line in the **Options** box when creating the metric. At least two options are required.
+
+## Validation rules (Number type)
+
+When the data type is **Number**, you can optionally set:
+
+- **Min** — the lowest acceptable value (input turns red below this)
+- **Max** — the highest acceptable value
+- **Required** — forces the driver to fill in the field before saving the session
+
+Validation rules are enforced in the setup entry form during a session.
+
+## Using a custom metric in a template
+
+After creating the metric, it appears in the Metrics Sidebar under its category. Drag it into any section of a custom template. It behaves identically to a predefined metric once added.
+
+A custom metric cannot be added to a predefined template. [Duplicate the predefined template](/setup-sheets/custom-templates/) first.
+
+## Editing a custom metric
+
+Custom metrics can be edited after creation (name, description, unit, options, validation rules, and corner-based toggle). Category and data type cannot be changed after creation to protect data integrity in existing sessions.
+
+To edit: open the template editor, locate the metric in the sidebar, click the edit icon on the metric card.
+
+## Deleting a custom metric
+
+A metric can only be deleted if it is not currently used in any template. Remove it from all templates first, then delete it from the metrics list. Deletion decrements your custom metric count.
+
+## Team metrics
+
+On the **Team** tier, metrics can be created at the team level. Team metrics are visible to all team members and count toward the team's 50-metric limit rather than an individual's.
+
+To create a team metric, select your team from the team selector before opening the **Create Custom Metric** dialog.
+
+## Related
+
+- [Custom Templates](/setup-sheets/custom-templates/)
+- [Corner-Based Metrics](/setup-sheets/corner-based-metrics/)
+- [Subscription Tiers](/concepts/subscription-tiers/)
+- [Teams — Shared Resources](/teams/shared-resources/)

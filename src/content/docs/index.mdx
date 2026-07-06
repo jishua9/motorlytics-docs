@@ -10,5 +10,20 @@ hero:
       icon: right-arrow
 ---
 
-Welcome to the Motorlytics documentation. Use the sidebar to explore guides for
-managing cars, running events, recording setups, importing results, and analysing telemetry.
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Welcome to the Motorlytics documentation. New here? Start with the [Quick Start](/getting-started/quick-start/),
+then dig into any area below.
+
+<CardGrid>
+	<LinkCard title="Getting Started" description="Sign up, add a car, and record your first session." href="/getting-started/quick-start/" />
+	<LinkCard title="Core Concepts" description="How events, sessions, cars, venues, and layouts fit together." href="/concepts/how-motorlytics-is-organized/" />
+	<LinkCard title="Car Management" description="Cars, parts and lifecycle, service records, tyres, and odometer." href="/cars/managing-cars/" />
+	<LinkCard title="Events & Sessions" description="Find events, create your own, and manage practice/quali/race sessions." href="/events-sessions/finding-events/" />
+	<LinkCard title="Setup Sheets" description="Templates, custom metrics, corner-based values, and setup history." href="/setup-sheets/templates/" />
+	<LinkCard title="Results & Timing" description="Import results, enter them manually, and read the timing charts." href="/results/importing-results/" />
+	<LinkCard title="Pit Wall" description="Your live event hub: schedule, weather, radar, and wind." href="/pit-wall/overview/" />
+	<LinkCard title="Telemetry & Data Analysis" description="Import MoTeC/AiM data, analyse corners, G-forces, and lap deltas." href="/telemetry/importing-motec/" />
+	<LinkCard title="Teams" description="Create a team, manage members, and share resources." href="/teams/creating-a-team/" />
+	<LinkCard title="Subscriptions" description="Compare tiers, upgrade your plan, and understand feature limits." href="/subscriptions/tier-comparison/" />
+</CardGrid>

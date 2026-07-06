@@ -1,0 +1,60 @@
+---
+title: Notes and Ratings
+description: Record session notes, car feedback, action items, and mark a session complete with laps and best time.
+sidebar:
+  order: 6
+---
+
+The **Notes** tab and the **Complete Session** flow together capture the qualitative side of a session — your observations, car behaviour, follow-up tasks, and how the session went overall.
+
+## Session Notes tab
+
+Open a session and click the **Notes** tab. The tab is divided into three sections.
+
+### Session Notes
+
+A free-text area for anything you want to remember about the session — tyre behaviour, track conditions, setup changes you made during the session, or driver coaching feedback. Notes auto-save as you type (debounced, about 0.8 seconds after you stop).
+
+### Car Feedback
+
+A set of five sliders that capture a quick read on how the car felt:
+
+| Slider | Options |
+|--------|---------|
+| Balance | Understeer · Neutral · Oversteer |
+| Stability | Unstable · Neutral · Stable |
+| Grip | Low · Medium · High |
+| Braking | Weak · Balanced · Strong |
+| Acceleration | Wheelspin · Neutral · Traction |
+
+Click the desired option on each slider. Changes save automatically alongside your notes.
+
+### Car Action Items
+
+A checklist for follow-up tasks identified during the session — for example, *check front damper settings* or *replace rear brake pads*. Action items are linked to the car, not just the session, so they appear in the car's maintenance view as well.
+
+1. Click **Add action item** and type the task description.
+2. Tick the checkbox when the task is done.
+3. Items persist against the car until you delete them.
+
+## Completing a session
+
+After a session ends, use **Complete Session** to log the final lap count and best time. This also adds the distance driven to your car's odometer.
+
+1. From the session detail page, click the **Complete Session** button in the session header (the button is labelled *Edit Completion* if you have already completed it).
+2. Fill in the **Complete Session** dialog:
+   - **Laps Completed** *(required)* — the total number of laps you completed. If you have imported race results, this field is pre-filled from the results data.
+   - **Best Lap** *(optional)* — enter your fastest lap in M:SS.mmm format using the three split fields (minutes, seconds, milliseconds). Pre-filled from results if available.
+   - **Rating** *(optional)* — click a star to rate the session 1–5. This overrides or sets the rating from the Setup tab.
+   - **Notes** *(optional)* — a short summary note saved to the session.
+   - **Continue to add detailed lap times** — tick this checkbox to jump directly to the **Results** tab after saving, where you can enter individual lap times manually.
+3. Click **Complete Session** (or **Update Completion** in edit mode).
+4. A confirmation shows the kilometres added to your car — for example, *Added 88.96 km to Formula Ford #76*.
+
+> **When results are imported:** If you have already imported Natsoft or CSV results for this session, the lap count and best lap are pre-filled and the car's odometer has already been updated from the results data. Completing the session in this case records your rating and notes without double-counting kilometres.
+
+## Related
+- [Recording Setup Data](/events-sessions/recording-setup-data/)
+- [Session Types](/events-sessions/session-types/)
+- [Importing Results](/results/importing-results/)
+- [Cars Odometer](/cars/odometer/)

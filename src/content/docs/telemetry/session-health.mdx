@@ -1,0 +1,103 @@
+---
+title: Session Health
+description: How to read the engine health gauges for RPM, oil temperature, oil pressure, coolant temperature, and lambda, including the warning thresholds.
+sidebar:
+  order: 6
+---
+
+Session Health is available on **Pro and Team** plans and requires engine/health channels in the uploaded file. The view is only shown when at least one health channel is present — if your file contains GPS and speed data only, the Analysis tab shows "No engine data available for session health analysis".
+
+## Accessing the Session Health view
+
+1. Open a session with telemetry imported.
+2. Select the **Telemetry** tab, then select the **Analysis** sub-tab.
+
+The page is headed **Session Health Summary** and opens with an overall status banner.
+
+## Overall status banner
+
+The banner in the top-right of the section shows one of two states:
+
+| State | Meaning |
+|-------|---------|
+| **All parameters normal** (green) | Every channel with data is within its normal operating range |
+| **X parameters outside range** (amber) | One or more channels exceeded a warning threshold during the session |
+
+The count reflects all laps combined — a single spike in any channel during any lap is enough to trigger the warning.
+
+## Engine RPM card
+
+Shows **Peak RPM** (the highest single RPM value recorded) and the average. Below the headline figure, a bar chart shows **time-in-band distribution** across four bands:
+
+| Band | Colour |
+|------|--------|
+| < 3,000 rpm | Green |
+| 3,000 – 5,000 rpm | Blue |
+| 5,000 – 6,500 rpm | Amber |
+| > 6,500 rpm | Red |
+
+Each bar is labelled with the percentage of total time spent in that band.
+
+## Sensor gauge cards
+
+Each engine health sensor that has data gets its own card showing **Min**, **Max**, and **Avg** values for the session, plus a **warning badge** if any threshold was exceeded.
+
+### Oil Temperature
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Overheating | Max > **100 °C** | HIGH |
+| Too cold | Min < **50 °C** | LOW |
+
+### Oil Pressure
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Low pressure | Min < **1.0 bar** | LOW |
+
+### Water Temperature
+
+_(Labelled "Water Temperature" in the UI — also referred to as coolant temp.)_
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Overheating | Max > **95 °C** | HIGH |
+| Too cold | Min < **60 °C** | LOW |
+
+### Lambda / AFR
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Rich mixture | Avg < **0.9 λ** | RICH |
+| Lean mixture | Avg > **1.1 λ** | LEAN |
+
+The target lambda is **1.0** with a tolerance of **±0.1**. Note that this is an overall session average — brief off-throttle lean spikes are normal and will not trigger the warning by themselves.
+
+### Battery Voltage
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Overcharging | Max > **15.0 V** | HIGH |
+| Low voltage | Min < **11.5 V** | LOW |
+
+### Internal Voltage
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Low voltage | Min < **3.0 V** | LOW |
+
+### Logger Temperature
+
+| Condition | Threshold | Badge |
+|-----------|-----------|-------|
+| Overheating | Max > **60 °C** | HIGH |
+
+## Adaptive display
+
+Gauge cards only appear for channels that have data. A session recorded with a basic GPS/speed logger will show no health cards at all. A full wiring loom recording oil temp, oil pressure, coolant, and lambda will show four sensor cards plus the RPM card.
+
+## Related
+
+- [Understanding Channels](/telemetry/understanding-channels/)
+- [Importing MoTeC Data](/telemetry/importing-motec/)
+- [Subscription Tiers](/concepts/subscription-tiers/)

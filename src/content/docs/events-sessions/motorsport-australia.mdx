@@ -1,0 +1,47 @@
+---
+title: Motorsport Australia Events
+description: How Motorlytics imports and syncs events from the Motorsport Australia calendar.
+sidebar:
+  order: 3
+---
+
+Motorlytics can pull upcoming events directly from the official Motorsport Australia (MA) calendar. This lets you join sanctioned race meetings without typing in the event details manually.
+
+## How the sync works
+
+MA events are read from a public Teamup calendar that Motorsport Australia maintains. Motorlytics fetches the event list on demand when you open the **Find Events** tab — there is no scheduled background sync to wait for. Each fetch retrieves events for the date range you have selected (default: next three months).
+
+When an MA event is imported, Motorlytics:
+
+1. Matches the event's listed location to a venue in the Australian track catalog.
+2. Sets the track layout to that venue's **primary layout** (the default configuration).
+3. Marks the layout as **unconfirmed**, triggering the layout verification badge (see below).
+4. Stores the MA event's unique ID so duplicate imports are prevented — if two drivers join the same MA event, only one event record is created and both drivers link to it.
+
+MA events **cannot be edited or deleted** by users.
+
+## Layout verification badge
+
+Because MA events may list a venue without specifying which layout is being used (particularly at multi-layout venues), every newly imported MA event shows a yellow **Layout needs verification** badge on the event detail page.
+
+1. Open the event from **My Events** after joining it.
+2. You will see the badge and a **Verify layout** link next to the event name.
+3. Click **Verify layout** to open a dialog listing all active layouts for that venue.
+4. Select the correct layout and click **Confirm layout**.
+5. The badge disappears and the layout is now locked for telemetry, results, and analytics.
+
+Only the event creator or an admin can confirm the layout. If you are not the creator, contact the person who first imported the event.
+
+## State and discipline filters
+
+The **Find Events** tab auto-populates the **State** filter from your profile's home state. You can override it:
+
+- **State** — select any Australian state or territory. Events that span multiple states (for example, combined NSW/ACT or SA/NT rounds) may appear under either state depending on how MA has categorised them.
+- **Discipline** — filter to a specific racing discipline such as circuit racing, motorkhana, hill climb, or rally.
+
+> **NSW/ACT and SA/NT grouping:** The Motorsport Australia calendar groups some state regions together. An event that appears under *NSW/ACT* in the filter will show events for both New South Wales and the Australian Capital Territory.
+
+## Related
+- [Finding Events](/events-sessions/finding-events/)
+- [Manual Events](/events-sessions/manual-events/)
+- [Venues and Layouts](/concepts/venues-and-layouts/)

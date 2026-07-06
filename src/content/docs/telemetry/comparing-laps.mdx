@@ -1,0 +1,71 @@
+---
+title: Comparing Laps
+description: How to use the Lap Delta tab to compare two or more laps with a time delta chart, speed overlay, and corner-by-corner breakdown.
+sidebar:
+  order: 7
+---
+
+Lap comparison is available on **Pro and Team** plans. You need at least two complete laps in the session for the delta chart to display.
+
+## Opening the Lap Delta tab
+
+1. Open a session with telemetry imported.
+2. Select the **Telemetry** tab, then select **Lap Delta** from the sub-tab bar.
+
+## Selecting laps
+
+The **lap selector panel** floats over the left edge of the chart area. It lists all laps in the session with their lap times, best-lap highlighting, and the current selections.
+
+- **Reference lap** — the baseline. All delta values are calculated relative to this lap. Defaults to the best (fastest) lap in the session.
+- **Comparison laps** — one or more laps to compare against the reference. Select additional laps from the panel.
+
+Each comparison lap is assigned a colour (blue, red, green, amber, purple) that is used consistently across all charts on this tab.
+
+:::note[Screenshot]
+_Placeholder — capture the Lap Delta tab with a reference lap and two comparison laps selected, showing the delta chart and speed chart._
+:::
+
+## Delta chart
+
+The upper chart is headed **Delta (seconds) — vs Lap X** where X is the reference lap number.
+
+- The **vertical axis** shows time gain/loss in seconds, formatted as `+0.3s` / `−0.3s`.
+- Positive values (above the zero line) mean the comparison lap is **slower** at that point in the lap.
+- Negative values (below the zero line) mean the comparison lap is **faster** at that point.
+- The **end-of-line labels** show the total delta for each comparison lap at the finish line (e.g. `Lap 5: +0.32s`).
+
+The horizontal axis is lap distance (normalized). A dashed zero reference line sits at the centre.
+
+## Speed chart
+
+Below the delta chart is a **Speed (km/h)** chart showing the speed traces for all selected laps. The reference lap is drawn as a **dashed grey line**; comparison laps are drawn as solid coloured lines. This lets you see exactly where speed differences arise — earlier braking, slower apex speeds, or slower acceleration out of a corner.
+
+## Zooming
+
+Both charts share the same zoom state and zoom together:
+
+- **Scroll wheel** — zoom in or out, centred on the mouse cursor position. A "Scroll to zoom" hint appears until the first scroll.
+- **Click and drag** — draw a selection rectangle to zoom into that distance range.
+- Click **Reset Zoom** (rotate-left icon) to return to the full lap view.
+
+## Corner-by-Corner Analysis
+
+When the event has a track layout with corners defined, a **Corner-by-Corner Analysis** table appears below the speed chart. It shows Entry, Min (apex), and Exit speeds plus the time spent in each corner, with delta indicators against the reference lap.
+
+See [Corner Analysis](/telemetry/corner-analysis/) for a full explanation of the table.
+
+## Charts tab — multi-channel comparison
+
+For deeper channel comparison (throttle, brake, steering, RPM, G-force alongside speed), use the **Charts** tab instead:
+
+1. Select up to three channels using the pills at the top of the tab.
+2. Choose **Overlay** to draw all channels on one synchronized chart, or **Stacked** for separate panels per channel.
+3. Use the Floating Lap Selector on the right to add or remove laps.
+
+Channel selections and view mode (Overlay/Stacked) are saved per browser and persist across sessions.
+
+## Related
+
+- [Corner Analysis](/telemetry/corner-analysis/)
+- [Driver Inputs](/telemetry/driver-inputs/)
+- [Importing MoTeC Data](/telemetry/importing-motec/)

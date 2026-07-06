@@ -1,6 +1,66 @@
 ---
 title: Importing MoTeC Data
-description: Upload and process MoTeC CSV exports.
+description: How to upload a MoTeC CSV export to a session, what happens during processing, and how to fix a failed import.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+Telemetry import is available on **Pro and Team** plans. Amateur accounts cannot upload data logger files.
+
+Open any session, select the **Telemetry** tab, and you will see the upload area if no telemetry has been imported yet.
+
+## Supported file formats
+
+| Format | Extension | Notes |
+|--------|-----------|-------|
+| MoTeC CSV export | `.csv` | Standard MoTeC i2 "Export to CSV" output |
+| MoTeC i2 data | `.ld` | Native MoTeC logger file |
+| AiM | `.xrk` / `.xrz` | AiM native data formats |
+
+Maximum file size is **200 MB**.
+
+## Uploading a file
+
+1. Navigate to the session you want to add telemetry to.
+2. Select the **Telemetry** tab.
+3. Drag your file onto the upload area, or click **Drag and drop your telemetry file** to open the file browser.
+4. The file name and size are shown once selected. Click **Remove** to swap it out before uploading.
+5. Click **Upload File**.
+
+The status indicator in the tab header changes to **Processing...** with a percentage counter. The message reads "Parsing data and detecting laps…" — this typically takes a few seconds for a short session and up to a minute for a full race.
+
+If the upload appears stuck for a long time, use the **Cancel Import** link below the progress bar. The import is cleared and you can upload the file again.
+
+## What happens after upload
+
+### 16-channel normalization
+
+MoTeC and AiM files use hardware-specific channel names. Motorlytics maps them to a standard set of 16 normalized channels (Speed, Throttle, Brake Front, Brake Rear, Steering, RPM, G-Force Lat/Lon/Vert, Oil Temp, Oil Pressure, Coolant Temp, Lambda, Battery Voltage, Wheel Speed, Lap Distance) during import. Channels present in your file are marked available; missing channels are shown as unavailable but do not cause errors.
+
+### Automatic lap detection
+
+The importer scans the GPS trace for start/finish crossings and splits the data into individual laps. Each lap is stored separately so you can select and compare specific laps across all telemetry views.
+
+### Layout auto-verification
+
+On the **first** MoTeC upload for a track layout that has not yet been GPS-verified, Motorlytics extracts the start/finish line from the GPS trace and marks the layout as verified. A pit-lane sanity check is applied first — if no valid on-track sample is found the auto-verify step is skipped and the layout remains unverified.
+
+## If no laps are detected
+
+After processing completes, if the banner reads **No Laps Detected**, the file was parsed but no valid lap data could be identified. Common causes:
+
+- The file covers only an out-lap or in-lap with no complete timed laps.
+- The start/finish GPS reference for the layout has not been set (contact your team admin).
+- The file format is not fully supported.
+
+Click **Delete & Re-upload** to clear the current import and try again with a different file.
+
+## Deleting telemetry
+
+Click the **Settings** icon (gear icon) in the Telemetry tab header and select **Delete Telemetry**. Confirm the dialog. All stored data for the session is removed and you can upload a new file.
+
+## Related
+
+- [Understanding Channels](/telemetry/understanding-channels/)
+- [Comparing Laps](/telemetry/comparing-laps/)
+- [Session Types](/events-sessions/session-types/)

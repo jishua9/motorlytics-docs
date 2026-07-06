@@ -1,0 +1,91 @@
+---
+title: Adding Your First Car
+description: How to create a car profile in Motorlytics, including make, model, category, race number, and starting odometer.
+sidebar:
+  order: 3
+---
+
+Every session, setup sheet, and part lifecycle in Motorlytics is tied to a car. This page explains how to create your first car and what each field means.
+
+## During signup
+
+The quickest way to add a car is in the **Car Details** step of the signup wizard (step 2 of 3). Fill in the fields and click **Continue** — you can always edit or add more detail later.
+
+Fields available during signup:
+
+| Field | Required | Notes |
+|---|---|---|
+| Make | Yes | e.g. Toyota, Van Diemen |
+| Model | Yes | e.g. 86, RF99 |
+| Year | No | Four-digit year |
+| Category | Yes | Select from predefined racing categories (Formula Ford, Excel, GT, Touring Car, and more) |
+| Race Number | No | Auto-filled from the car on future events |
+| Colour | No | |
+| Car Photo | No | Upload an optional photo of your car |
+| Starting KM | No | Set this to the odometer reading when you start tracking — used for part lifecycle calculations |
+
+## Adding a car after signup
+
+Go to **Cars** in the sidebar, then click **Add Car** (or navigate directly to `/cars/new`). The full create form has four sections:
+
+### Car Details (required)
+
+- **Make** and **Model** — the vehicle's make and model.
+- **Year** — model year.
+- **Colour** — optional.
+- **Category** — select from predefined racing categories. This ties the car to the correct setup templates and class-based filtering.
+
+### Technical Specs
+
+| Field | Notes |
+|---|---|
+| Engine | Engine code or description, e.g. 2ZZ-GE |
+| Capacity | e.g. 1.8L |
+| Chassis Number | Used for logbook and compliance identification |
+| Starting KM | Odometer reading at time of first entry — affects part lifecycle tracking |
+
+### Racing Details
+
+| Field | Notes |
+|---|---|
+| Race Number | Pre-fills when you join events |
+| Transponder | Your transponder ID |
+
+### Registration
+
+| Field | Notes |
+|---|---|
+| Logbook | Logbook number |
+| Plate | Registration plate |
+| COD | Certificate of Description number |
+
+Click **Add Car** to save.
+
+:::note[Screenshot]
+_Placeholder — capture the Create Car form showing all four sections here._
+:::
+
+## Car limits by subscription tier
+
+The number of cars you can add depends on your subscription:
+
+- **Amateur** — limited number of personal cars
+- **Pro** — higher limit; upgrade prompt appears when the limit is reached
+- **Team** — unlimited cars; team cars are shared across all team members
+
+When you reach your limit, the form shows an **Upgrade required** notice with a link to `/subscription`.
+
+## Multiple cars and team cars
+
+You can manage several cars from the **Cars** section. Each car has its own parts inventory, service history, odometer, tyre sets, and setup configurations.
+
+If you are a member of a team, shared team cars appear alongside your personal cars throughout the app.
+
+See [Managing Cars](/cars/managing-cars/) for full details on editing, deleting, and team car access.
+
+## Related
+- [Quick Start](/getting-started/quick-start/)
+- [Managing Cars](/cars/managing-cars/)
+- [Parts and Lifecycle](/cars/parts-and-lifecycle/)
+- [Odometer](/cars/odometer/)
+- [Subscription Tiers](/concepts/subscription-tiers/)

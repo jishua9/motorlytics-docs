@@ -1,6 +1,47 @@
 ---
 title: Setup Templates
-description: Using pre-built setup sheet templates.
+description: Use pre-built setup sheet templates to record car configuration for each session.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+A setup template is the structured form that appears in the **Setup Sheet** tab of each session. It defines which metrics are recorded and how they are grouped into sections. Motorlytics ships with predefined templates for common car categories so you can get started immediately.
+
+## What templates contain
+
+Each template has one or more **sections** (e.g., "Suspension", "Tyres", "Aerodynamics") and a list of **metrics** within each section. Metrics can be simple numeric fields, text notes, dropdowns, or yes/no toggles. Corner-based metrics (see [Corner-Based Metrics](/setup-sheets/corner-based-metrics/)) capture a separate value per wheel position (FL / FR / RL / RR).
+
+## Predefined templates
+
+Motorlytics includes ready-made templates organised by car category:
+
+| Category | Intended use |
+|----------|-------------|
+| Basic | General track day or club racing |
+| Formula | Open-wheel single-seaters |
+| GT | GT-class road-based cars |
+| Touring Car | Tin-top series |
+| Sports Car | Endurance / sports-prototype |
+
+These templates cannot be edited directly. You can, however, duplicate any predefined template to create a custom copy — see [Custom Templates](/setup-sheets/custom-templates/).
+
+## Assigning a template to a car
+
+1. Navigate to **Cars** and open the car you want to configure.
+2. Select the **Setup** tab.
+3. In the **Templates** panel on the left, locate the template you want under the **Predefined** or **Custom** section.
+4. Click the template name to select it. A tick appears next to the active template.
+5. To make this the default for future sessions, click the **Set as default** option on the template item.
+
+Once a default template is assigned to a car, Motorlytics automatically loads that template when you open the **Setup Sheet** tab for any session with that car.
+
+## Selecting a different template per session
+
+Inside a session, the header of the **Setup Sheet** tab shows the active template name. If you need to use a different template for a one-off session, return to the car's **Setup** tab, select the other template, and it will apply to that session.
+
+## Related
+
+- [Custom Templates](/setup-sheets/custom-templates/)
+- [Custom Metrics](/setup-sheets/custom-metrics/)
+- [Recording Setup Data](/events-sessions/recording-setup-data/)
+- [Setup History](/setup-sheets/setup-history/)

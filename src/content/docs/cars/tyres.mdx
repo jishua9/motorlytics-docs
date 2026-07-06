@@ -1,0 +1,72 @@
+---
+title: Tyres
+description: Create tyre sets, track heat cycles and usage, and monitor condition so you know when a set is ready to retire.
+sidebar:
+  order: 4
+---
+
+Tyre sets in Motorlytics track the condition of each set of tyres independently, using heat cycles, session count, event count, and/or kilometres as lifecycle metrics. You choose which metrics matter for your compound and racing style.
+
+## Creating a tyre set
+
+1. Go to the car's **Maintenance** tab and locate the **Tyre Sets** panel.
+2. Click **Add Tyre Set**.
+3. Enter a **Name** for the set (e.g., Set 1, Race Slicks, Practice Wets).
+4. Set the **Purchase Date**.
+
+### Choosing lifecycle metrics
+
+Under **Track Lifespan By**, enable at least one metric and enter the expected lifespan:
+
+| Metric | What to enter |
+|--------|--------------|
+| **Heat Cycles** | Total heat cycles the set should last (default 20) |
+| **Sessions** | Total sessions before retirement |
+| **Events** | Total events before retirement |
+| **Kilometers** | Total KM before retirement |
+
+You can enable multiple metrics simultaneously. Motorlytics uses worst-case (whichever metric is most worn) to determine overall status.
+
+### Starting values for existing sets
+
+If the tyre set has already been used before you started tracking it in Motorlytics, click **Already Used?** and enter the starting values for each metric (Heat Cycles, Sessions, Events, KM). The lifecycle counter will begin from these values.
+
+### Optional details
+
+Click **More Details** to record **Compound**, **Brand**, **Model**, **Size**, **Cost ($)**, and **Notes**.
+
+Click **Add Tyre Set** to save.
+
+## Tyre set status
+
+Motorlytics automatically calculates status from usage across all enabled metrics:
+
+| Status | Meaning |
+|--------|---------|
+| **New** | No heat cycles or sessions logged yet |
+| **Scrubbed** | First heat cycle or session complete |
+| **Good** | Less than 70% of lifespan used |
+| **Worn** | 70% or more of lifespan used |
+| **Retired** | Manually archived |
+
+## Logging usage
+
+After each session or event, log usage against the tyre set:
+
+1. Find the tyre set in the **Tyre Sets** panel and open its row menu (⋮).
+2. Select **Log Usage**.
+3. Enter **Heat Cycles Added** (default 1 per session; use 0 if running tyre warmers, or 2+ for multiple stints).
+4. Optionally enter **KM Added** and any **Notes**.
+5. Click **Log Usage**.
+
+The set's heat cycle count, session count, and kilometre totals update immediately, and the status badge recalculates.
+
+## Retiring a tyre set
+
+When a set is finished, open its menu and choose **Retire**. The set is archived and no longer appears in the active list, but its history is preserved. You can restore a retired set from the same menu if needed.
+
+## Related
+
+- [Parts and Lifecycle](/cars/parts-and-lifecycle/)
+- [Service Records](/cars/service-records/)
+- [Managing Cars](/cars/managing-cars/)

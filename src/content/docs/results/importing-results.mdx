@@ -1,6 +1,68 @@
 ---
 title: Importing Results
-description: Import race results from CSV and Natsoft.
+description: Bring official race results, lap charts and lap times into a session by pasting them from Natsoft.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+Motorlytics imports official timing data by pasting it from the Natsoft results portal. There is no file upload step — you copy the text straight from the Natsoft page and paste it into Motorlytics, which parses the columns automatically.
+
+> **Note on formats:** Some marketing copy refers to "CSV and Natsoft" imports. In practice, results are imported by copy-pasting Natsoft's text output; the parser handles the column layout for you. If your timing provider is not Natsoft, use [Manual Entry](/results/manual-entry/) instead.
+
+## Where to import
+
+Open the session you want results for at **Events → (your event) → Sessions → (your session)** and select the **Results** tab. The tab has three import areas, shown as sub-tabs/buttons:
+
+- **Results** — the finishing classification (positions, drivers, times).
+- **Position Chart** (import button labelled **Lap Chart**) — lap-by-lap running order.
+- **Lap Times** — every driver's individual lap times.
+
+You must import **Results** first. The Position Chart and Lap Times imports link back to the classification, so they are unavailable until results exist.
+
+## Importing the classification
+
+1. In a browser, open the Natsoft results page for your session at `http://racing.natsoft.com.au/results/#2`.
+2. Select all the text on the page (Ctrl+A) and copy it (Ctrl+C).
+3. In Motorlytics, on the **Results** tab, choose to import. A modal titled **Import Results from Natsoft** appears with a monospace text box (placeholder *"Paste the copied Natsoft results here..."*).
+4. Paste the copied text and click **Parse Results →**.
+5. Review the parsed rows in the **Edit & Confirm Results** table. Fix anything that looks wrong (see below), then click **Save Results**.
+
+### What the parser reads
+
+The parser auto-detects the session type (qualifying vs race) and the column layout from the pasted header. It supports both the SA-style layout (`Pos Car Competitor/Team`) and the VIC-style layout (`Pos Car Driver`), so the driver and team columns are mapped correctly either way. It captures:
+
+- **Position** and **car / race number**
+- **Driver** and **Team / Competitor**
+- **Vehicle**
+- **Lap count, total time, gap and best lap** where present
+- **Status** — finishers plus DNF, DNS and DSQ
+
+Lap times are read in `M:SS.mmmm` format (four decimal places).
+
+## Importing the position (lap) chart
+
+The Position Chart shows the running order on each lap and is only available for **Race** sessions.
+
+1. Copy the lap chart text from Natsoft for the same session.
+2. On the **Position Chart** area of the Results tab, click **Import Lap Chart**.
+3. Paste the text and confirm. Each lap's running order is mapped to the drivers already in your classification. If a chart is already present, the button reads **Re-import**.
+
+## Importing lap times
+
+1. Copy the individual/sector-and-lap-times text from Natsoft.
+2. On the **Lap Times** area, click **Import Lap Times**.
+3. Paste and confirm. Both the "Individual Lap Times" and "Sector and Lap Times" Natsoft layouts are supported.
+
+## Editing imported data afterwards
+
+Imported results are fully editable. Open the **Options** menu on the Results tab and choose **Edit Results** to reopen the same review table. You can change any cell — position, race number, driver, team, vehicle, laps, time, gap, best lap and status — add rows, or clear all rows, then **Save Results**. Lap times can likewise be corrected via the manual lap-times editor described in [Manual Entry](/results/manual-entry/).
+
+## Tier availability
+
+Results import, lap charts and lap times are available on **all tiers** (Amateur, Pro and Team) — there is no subscription gate on importing results. Advanced weekend analytics that build on this data live in the [Pit Wall](/pit-wall/overview/) and are Pro/Team features.
+
+## Related
+- [Manual Entry](/results/manual-entry/)
+- [Lap Time Charts](/results/lap-time-charts/)
+- [Multi-Driver Results](/results/multi-driver/)
+- [Pit Wall Overview](/pit-wall/overview/)

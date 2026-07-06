@@ -1,6 +1,63 @@
 ---
 title: Pit Wall Overview
-description: Your real-time event information hub.
+description: Your real-time event hub for countdown timers, session schedules, weather, and performance during a race weekend.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+The Pit Wall is the live command centre for an event you have joined. It pulls your sessions, weather, results, and quick stats into a single view so you can stay focused on driving rather than navigating between screens.
+
+## Opening the Pit Wall
+
+The Pit Wall is available for any event you have joined (i.e. you have an active participation with a car assigned).
+
+1. Navigate to **Events** in the sidebar and find the event.
+2. Click **Pit Wall** in the event row, or open the event detail and click **Go to Pit Wall**.
+3. The Pit Wall opens full-screen at `/events/[id]/pitwall`.
+
+You can also reach it directly from the dashboard calendar card — clicking an event you have joined takes you straight to the Pit Wall.
+
+## Title Bar
+
+Across the top of every Pit Wall screen, a persistent title bar shows:
+
+- **Event name**, track layout, and your car's race number and category.
+- **Per-day weather forecast** for the event weekend — date, condition icon, high temperature, and rain probability.
+- **Countdown timer** counting down to the next session. The timer shows `HH:MM:SS` or `MM:SS` depending on remaining time. The bar changes colour to amber (imminent, within 5 minutes) or green (in-progress) and a progress bar appears once a session is live.
+
+When no sessions have been added yet, the timer area shows "No upcoming sessions — Add a session to get started."
+
+## Tabs
+
+The Pit Wall is divided into four tabs:
+
+| Tab | Purpose |
+|-----|---------|
+| **Dashboard** | Sessions schedule, quick weather summary, results, lap times, quick stats, and best-match setup |
+| **Weather** | Full weather forecast, hourly timeline, track wind diagram, and animated rain radar |
+| **Analytics** | Lap time analysis and setup correlation across the weekend |
+| **Circuit** | Track map and circuit annotation tools |
+
+A **Settings** dropdown at the far right of the tab bar gives access to **Edit Event** and **Leave Event**.
+
+## Dashboard Layout
+
+The Dashboard tab is arranged in three columns:
+
+**Left column**
+- **Sessions** — your session schedule with live status indicators and best-lap times. See [Session Management](/pit-wall/session-management/) for full detail.
+- **Action Items** — tasks and notes raised against the car for this event.
+
+**Centre column**
+- **Weather** — a compact summary of current conditions with a session timeline overlay. Full weather lives on the Weather tab.
+- A tabbed panel showing session results and lap times for the event.
+
+**Right column**
+- **Quick Stats** — delta comparisons across sessions anchored to a chosen baseline session (defaults to the most recent completed race).
+- **Best Match** — the historical setup most closely matching current conditions at this circuit.
+
+## Related
+- [Session Management](/pit-wall/session-management/)
+- [Weather](/pit-wall/weather/)
+- [Creating Your First Event](/getting-started/creating-your-first-event/)
+- [Finding Events](/events-sessions/finding-events/)

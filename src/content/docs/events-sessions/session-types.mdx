@@ -1,0 +1,59 @@
+---
+title: Session Types
+description: Understand the session types available in Motorlytics and the fields you fill in when creating a session.
+sidebar:
+  order: 4
+---
+
+Sessions live inside events and represent individual on-track stints — a qualifying run, a race, a practice slot, and so on. You must have joined an event before you can add sessions to it.
+
+## Available session types
+
+| Type | When to use |
+|------|-------------|
+| **Practice** | Open practice or private testing laps |
+| **Qualifying** | Timed qualifying session |
+| **Race** | Competitive race |
+| **Warmup** | Short warm-up prior to a race |
+| **Test** | Dedicated test day session |
+
+## Creating a session
+
+Sessions are created from the **Pit Wall** for a specific event (`/events/[id]/pitwall`).
+
+1. On the Pit Wall, click **Add Session**.
+2. Select the **Session Type** from the dropdown (Practice, Qualifying, Race, Warmup, or Test).
+3. Set the **Session Number** — for example, *1* for the first qualifying session of the weekend. This is auto-calculated if you leave it blank (it counts existing sessions of the same type and adds one).
+4. Set the **Start Time** — the date and time the session is scheduled to begin, in the track's local timezone.
+5. Set the **Duration**:
+   - **Time-based** — enter the length in minutes (for example, *20* for a 20-minute qualifying session). This is the default mode.
+   - **Lap-based** — switch off the time toggle and enter the number of laps instead.
+6. Click **Save Session**. The session appears in the Pit Wall session schedule.
+
+## Session tabs
+
+Once a session is created, clicking it opens the session detail page at `/events/[id]/sessions/[sessionId]`. The page has the following tabs:
+
+- **Setup** — fill in your car's setup sheet for this session (see [Recording Setup Data](/events-sessions/recording-setup-data/)).
+- **Notes** — session notes, car feedback sliders, and action items (see [Notes and Ratings](/events-sessions/notes-and-ratings/)).
+- **Results** — lap times and race results; this tab appears only after the session's start time has passed.
+- **Telemetry** — import and view MoTeC CSV data; available immediately (Pro and Team tiers only).
+
+## Editing a session
+
+To change the session type, number, start time, or duration after creation:
+
+1. Open the session detail page.
+2. Click the **settings menu** (three-dot icon) in the session header.
+3. Select **Edit Session**.
+4. Adjust the fields in the **Edit Session** dialog and click **Save**.
+
+## Completing a session
+
+After a session ends, mark it complete to record laps and update your car's odometer (see [Notes and Ratings](/events-sessions/notes-and-ratings/) for the full completion workflow).
+
+## Related
+- [Notes and Ratings](/events-sessions/notes-and-ratings/)
+- [Recording Setup Data](/events-sessions/recording-setup-data/)
+- [Pit Wall Overview](/pit-wall/overview/)
+- [Pit Wall Session Management](/pit-wall/session-management/)

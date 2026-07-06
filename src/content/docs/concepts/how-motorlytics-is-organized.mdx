@@ -1,6 +1,55 @@
 ---
 title: How Motorlytics is Organized
-description: The core concepts behind events, sessions, and cars.
+description: The event-centric model that connects tracks, events, your car, and your private session data.
+sidebar:
+  order: 1
 ---
 
-Coming soon.
+Motorlytics is built around a simple idea: an event at a circuit is something you *join*, not something you *own*. That distinction shapes everything — from how you find races to how your private session data stays separate from other drivers at the same event.
+
+## The Event-Centric Model
+
+Everything flows from a shared calendar of events tied to specific track layouts. You join an event with a particular car, then record private sessions (practice, qualifying, race) underneath that participation.
+
+```text
+Track (venue)
+  └── TrackLayout  (e.g. Gardner GP, Druitt, Brabham)
+        └── Event  ← shared across all users; auto-imported from MA or created manually
+              └── EventParticipation  ← your entry: which car + race number + category
+                    └── UserSession   ← your private data: setup, notes, weather, results, telemetry
+```
+
+The separation at each level matters:
+
+- **Track / TrackLayout** — The physical circuit and its specific configuration. A single venue like Sydney Motorsport Park has several layouts (Gardner GP, Brabham, Druitt, Amaroo). Lap times recorded on different layouts are never mixed.
+- **Event** — A race meeting or track day scheduled at a specific layout. Events are *shared*; if you and a teammate both attend the same event, you both see the same event record. Motorsport Australia events are auto-imported; you can also create your own.
+- **EventParticipation** — Your personal entry into an event. This is where Motorlytics knows which car you drove, your race number, and your category. One participation per user per event.
+- **UserSession** — Each individual session (practice, qualifying, heat, race) within an event. Your setup sheets, driver notes, lap times, telemetry, and weather snapshots all live here and are **private to you**.
+
+## Shared vs. Private Data
+
+| Data | Shared | Private to you |
+|------|--------|----------------|
+| Event name, date, track | Yes | — |
+| Official race results | Yes (linked to the event) | — |
+| Your car for the event | — | Yes (EventParticipation) |
+| Setup sheet data | — | Yes (UserSession) |
+| Session notes & ratings | — | Yes (UserSession) |
+| Lap times & telemetry | — | Yes (UserSession) |
+| Weather snapshot | — | Yes (UserSession) |
+
+Official results (finishing positions, lap times) are stored as a shared `Results` record attached to the event so any participant can see them. Your personal session data — how the car was set up, what you wrote in your notes, your telemetry file — is only visible to you (or your team, on the Team tier).
+
+## Why This Design?
+
+Tying everything to a shared event means you can:
+
+- **Find events before you enter** — browse the calendar, see who else is going, then add your participation.
+- **Compare against other entrants** — because results are shared, the app can show your finish position relative to the full field.
+- **Keep your setup private** — your setup sheets and notes never leak to other drivers at the same event.
+
+## Related
+- [Venues & Layouts](/concepts/venues-and-layouts/)
+- [Finding Events](/events-sessions/finding-events/)
+- [Session Types](/events-sessions/session-types/)
+- [Recording Setup Data](/events-sessions/recording-setup-data/)

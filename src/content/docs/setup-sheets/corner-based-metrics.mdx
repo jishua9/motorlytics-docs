@@ -1,0 +1,59 @@
+---
+title: Corner-Based Metrics
+description: Capture separate values for each wheel position (FL, FR, RL, RR) in your setup sheets.
+sidebar:
+  order: 4
+---
+
+Corner-based metrics record an individual value per wheel position — **Front Left (FL)**, **Front Right (FR)**, **Rear Left (RL)**, and **Rear Right (RR)** — within a single metric row. They are ideal for suspension settings (ride height, spring rate, damper clicks) and tyre data (pressures, temperatures) where each corner of the car has a different value.
+
+## How corner-based metrics look in a session
+
+When you open the **Setup Sheet** tab for a session, a corner-based metric is displayed as a row of four inputs, one per corner:
+
+```
+Front Ride Height   FL [___] mm   FR [___] mm   RL [___] mm   RR [___] mm
+```
+
+Each input accepts the same data type as the metric (number, text, dropdown, or yes/no). Hover over a previously entered value to see what was recorded in an earlier session — useful for quick reference during a race weekend.
+
+## Enabling corner-based entry on a metric
+
+You can flag any metric as corner-based when you create it:
+
+1. Open the **Create Custom Metric** dialog (from the Metrics Sidebar in the template editor).
+2. Toggle **Corner-Based** on.
+3. Finish filling in the name, category, data type, and unit, then click **Create**.
+
+The corner-based flag can also be updated when editing an existing custom metric.
+
+Predefined metrics that are corner-based (such as tyre pressures and ride heights in the built-in templates) are already set correctly and do not require any configuration.
+
+## Corner-based sections
+
+An entire template section can be set to a corner layout. When **Corner-based section** is enabled on a section, every metric in that section uses a compact four-column grid display:
+
+|  | FL | FR | RL | RR |
+|--|----|----|----|----|
+| Spring Rate | | | | |
+| Ride Height | | | | |
+| Bump Clicks | | | | |
+
+This is useful for sections that are exclusively wheel-specific, such as a "Suspension" section.
+
+To enable this on a section, open the template in the editor (`/setup/configure`), click the section name, and toggle **Corner-based section** on.
+
+## Data storage
+
+The four corner values are stored as `FL`, `FR`, `RL`, and `RR` keys within the metric's data object in the session setup data. When you view setup history or compare setups across sessions, all four values are shown side by side.
+
+## Mixing corner-based and standard metrics
+
+Within the same section, you can freely mix corner-based and single-value metrics. Corner-based metrics render with four inputs; standard metrics render with one. The section-level corner layout toggle forces all metrics in that section to use the four-column grid regardless of the individual metric setting.
+
+## Related
+
+- [Custom Metrics](/setup-sheets/custom-metrics/)
+- [Custom Templates](/setup-sheets/custom-templates/)
+- [Setup History](/setup-sheets/setup-history/)
+- [Recording Setup Data](/events-sessions/recording-setup-data/)

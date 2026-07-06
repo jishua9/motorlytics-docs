@@ -1,0 +1,47 @@
+---
+title: Odometer
+description: Understand how racing KM is tracked, set a starting KM when registering a car, and correct the odometer when sessions were missed.
+sidebar:
+  order: 5
+---
+
+The racing odometer records the total kilometres a car has competed since you began tracking it in Motorlytics. This figure drives all part lifecycle calculations — every part's remaining life is computed from the difference between the car's current Racing KM and the KM at which the part was installed.
+
+## How racing KM accumulates
+
+Racing KM is updated automatically when sessions are recorded against an event that includes lap counts and track length data. The system calculates `track length × laps` and adds the result to the car's running total.
+
+## Setting starting KM
+
+When you first add a car, you can enter a **Starting KM** value in the **Technical Specs** section of the new car form. Use this field if the car has existing racing history you want to account for — for example, if a car has already completed 500 km of racing before you started tracking it in Motorlytics.
+
+Parts installed after initial setup will use the car's Racing KM at the time of installation, so setting an accurate Starting KM ensures lifecycle calculations are correct from day one.
+
+## Adjusting the odometer manually
+
+If sessions were not logged, data was entered incorrectly, or you need to correct a discrepancy, use the **Adjust Odometer** function:
+
+1. On the car's **Overview** tab, open the **Car Details** card.
+2. Click the three-dot menu (⋮) in the card header.
+3. Select **Adjust Odometer**.
+4. The current **Current Racing KM** is shown read-only for reference.
+5. Enter the corrected value in **New Racing KM**.
+6. Select a **Reason for Adjustment**:
+   - **Correction** — fixing an incorrect value
+   - **Unlogged Session** — adding KM for sessions that were never recorded
+   - **Initial Setup** — setting the baseline when onboarding an existing car
+   - **Other** — any other reason
+7. Add optional **Notes** to explain the change.
+8. Click **Save Adjustment**.
+
+If the new value is more than 10% different from the current value, a warning banner appears reminding you that the change will affect all part lifecycle calculations. Review your parts after a large adjustment to confirm their remaining life still looks correct.
+
+## Effect on part lifecycle
+
+Changing the Racing KM immediately recalculates the lifecycle percentage for every active part on the car. Parts installed at a higher KM than the new odometer value will show a negative current life, which appears as 0% used — correct the odometer or the part's installation KM via the Edit Part dialog if this happens.
+
+## Related
+
+- [Parts and Lifecycle](/cars/parts-and-lifecycle/)
+- [Managing Cars](/cars/managing-cars/)
+- [Service Records](/cars/service-records/)

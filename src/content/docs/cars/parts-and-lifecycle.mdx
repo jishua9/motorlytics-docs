@@ -1,0 +1,74 @@
+---
+title: Parts and Lifecycle
+description: Add parts with install date and lifespan, track lifecycle percentage and remaining KM, and manage replacement chains.
+sidebar:
+  order: 2
+---
+
+Motorlytics tracks every part on your race car against the car's racing odometer, so you always know what percentage of a part's life has been used and how many kilometres remain before replacement is due.
+
+## Adding a part
+
+1. Go to the car's **Maintenance** tab and locate the **Parts** panel.
+2. Click **Add Part**.
+3. Enter the **Part Name** (e.g., Engine Oil, Brake Pads, Gearbox) and choose a **Category** (Engine, Transmission, Suspension, Brakes, Tyres, Fluids, Electrical, Chassis, or Other).
+4. Set the **Installation Date** using the date picker.
+5. Enter **Lifespan (KM)** — the total kilometres the part is expected to last.
+6. Optionally set an **Expires On** date for time-sensitive parts such as brake fluid or coolant.
+7. Expand **More Details** to add **Brand**, **Part Number**, **Cost ($)**, and **Notes**.
+8. Click **Add Part**.
+
+The part is installed at the car's current Racing KM, which becomes its **Installation KM**.
+
+## How lifecycle is calculated
+
+Once a part is installed, Motorlytics calculates its lifecycle as:
+
+```
+Current Life KM  = Car Racing KM − Installation KM
+Remaining Life KM = Lifespan KM − Current Life KM
+% Used           = Current Life KM ÷ Lifespan KM × 100
+```
+
+If you also set an **Expires On** date, Motorlytics calculates a time-based percentage in parallel and uses whichever is worse (higher percentage) as the overall status.
+
+### Status thresholds
+
+| % Used | Status |
+|--------|--------|
+| 0–69% | Healthy |
+| 70–89% | Monitor |
+| 90–99% | Replace Soon |
+| 100%+ | Overdue |
+
+These thresholds are fixed. Adjust your **Lifespan (KM)** value to tune when warnings appear for your specific parts.
+
+## Installing a used part (Prior Part KM)
+
+If you are fitting a part that already has some kilometres on it, enable the **Used Part** toggle in the Add Part dialog. Enter the **Prior KM on Part** (how many kilometres are already on the part). Motorlytics will back-calculate the effective Installation KM so the lifecycle counter starts at the correct percentage.
+
+**Prior Part KM requires a Pro or Team subscription.**
+
+## Replacing a part
+
+When a part reaches end of life, open its row in the Parts panel (three-dot menu or click the part) and choose **Replace Part**. This:
+
+1. Archives the old part and records it in the replacement chain.
+2. Creates a new part record with reset lifecycle, using the car's current Racing KM as the new Installation KM.
+3. Preserves the same Part Name and lifespan by default — edit them if the replacement spec differs.
+
+If fitting a used replacement, enable **Used Replacement** and enter **Prior KM on Replacement** to start the new part's lifecycle at the right point (Pro/Team only).
+
+### Replacement chains
+
+Each replaced part keeps a reference to its predecessor. This creates a full history of a part slot (e.g., every set of brake pads ever fitted), useful for auditing and warranty tracking.
+
+## Removing a part
+
+If a part is removed without being replaced (e.g., a weight reduction or category change), open the part's menu and choose **Remove Part**. The part is marked inactive and no longer appears in the active parts list.
+
+## Related
+
+- [Odometer](/cars/odometer/)
+- [Service Records](/cars/service-records/)
+- [Managing Cars](/cars/managing-cars/)

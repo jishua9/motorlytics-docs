@@ -1,0 +1,62 @@
+---
+title: Driver Inputs
+description: How to view throttle, brake, and steering traces across a lap to identify technique differences between laps or drivers.
+sidebar:
+  order: 5
+---
+
+Driver input analysis is available on **Pro and Team** plans. The throttle, brake, and steering channels must be present in the uploaded file — check the **Data Channels** card on the **Laps** tab to confirm.
+
+## Accessing driver input traces
+
+Driver input channels (Throttle, Brake, Steering) are available in two places:
+
+### Charts tab
+
+1. Open a session with telemetry imported and select the **Charts** tab.
+2. The channel selector pills at the top show only the channels present in your data. Click **Throttle**, **Brake**, or **Steering** to add them to the chart.
+3. Up to three channels can be active simultaneously. Selecting a fourth channel drops the oldest selection (FIFO order).
+4. Use the **Overlay** / **Stacked** toggle to either combine all channels on one chart or separate them into individual panels.
+
+Multiple laps can be loaded via the **Floating Lap Selector** panel. Each lap is coloured separately (blue, red, green, amber, purple) so you can compare input patterns between laps directly.
+
+### Track Map data panel
+
+1. Select the **Track Map** tab.
+2. Click the **chart panel** button in the map toolbar to open the data panel.
+3. Select **Throttle**, **Brake**, or **Steering** from the tab bar inside the panel.
+
+The data panel syncs with the map playback position — as the playback marker moves around the track, a vertical reference line moves through the input chart to show the current position.
+
+:::note[Screenshot]
+_Placeholder — capture the Charts tab with Throttle and Brake selected in Stacked mode, two laps loaded, showing the parallel traces._
+:::
+
+## Channel details
+
+### Throttle (THR)
+
+- **Range:** 0–100%
+- A flat line at 100% is full throttle. The shape of the throttle-on point after a corner exit reveals how aggressively the driver is applying power.
+
+### Brake (BRK)
+
+- **Range:** 0–100% (normalized) or raw PSI if the data is recorded in brake pressure
+- When the raw brake pressure exceeds 100 (indicating PSI data), Motorlytics normalizes it to a 0–100% scale relative to the session peak. The axis label reflects the actual unit.
+- Steep leading edges indicate hard initial brake applications; a tapered release shows trail braking into the corner.
+
+### Steering (STR)
+
+- **Range:** −90° to +90°
+- Positive values are right-hand steering input; negative values are left-hand. A centre reference line at 0° is shown in the chart.
+- Smooth, early steering inputs typically indicate a better line. Corrections (rapid oscillations) can indicate instability or late turn-in.
+
+## Lap Distance axis
+
+The horizontal axis in all driver input charts is **Lap Distance** — a normalized 0–500 point index that maps proportionally across the full lap. Absolute distance in metres is not shown on the axis, but hovering over the chart shows the value for each channel at that point.
+
+## Related
+
+- [Comparing Laps](/telemetry/comparing-laps/)
+- [G-Force Diagram](/telemetry/g-force/)
+- [Understanding Channels](/telemetry/understanding-channels/)
