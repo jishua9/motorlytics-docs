@@ -33,9 +33,16 @@ If the upload appears stuck for a long time, use the **Cancel Import** link belo
 
 ## What happens after upload
 
-### 16-channel normalization
+### 19-channel normalization
 
-MoTeC and AiM files use hardware-specific channel names. Motorlytics maps them to a standard set of 16 normalized channels (Speed, Throttle, Brake Front, Brake Rear, Steering, RPM, G-Force Lat/Lon/Vert, Oil Temp, Oil Pressure, Coolant Temp, Lambda, Battery Voltage, Wheel Speed, Lap Distance) during import. Channels present in your file are marked available; missing channels are shown as unavailable but do not cause errors.
+MoTeC and AiM files use hardware-specific channel names. Motorlytics maps them to a standard set of 19 normalized channels during import, grouped as follows:
+
+- **Position (3):** Speed, Lap Distance, Wheel Speed Front
+- **Inputs (5):** Throttle, Brake Front, Brake Rear, Steering Angle, Gear
+- **Engine (8):** RPM, Oil Temp, Oil Pressure, Coolant Temp, Lambda, Battery Voltage, Internal Voltage, Logger Temp
+- **Dynamics (3):** G-Force Lat, G-Force Long, G-Force Vert
+
+Channels present in your file are marked available; missing channels are shown as unavailable but do not cause errors.
 
 ### Automatic lap detection
 
