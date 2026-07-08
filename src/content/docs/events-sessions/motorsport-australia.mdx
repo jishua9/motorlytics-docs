@@ -9,14 +9,14 @@ Motorlytics can pull upcoming events directly from the official Motorsport Austr
 
 ## How the sync works
 
-MA events are read from a public Teamup calendar that Motorsport Australia maintains. Motorlytics fetches the event list on demand when you open the **Find Events** tab — there is no scheduled background sync to wait for. Each fetch retrieves events for the date range you have selected (default: next three months).
+MA events are read from a public Teamup calendar that Motorsport Australia maintains. Motorlytics fetches the event list on demand when you open the **Find Events** tab. There is no scheduled background sync to wait for. Each fetch retrieves events for the date range you have selected (default: next three months).
 
 When an MA event is imported, Motorlytics:
 
 1. Matches the event's listed location to a venue in the Australian track catalog.
 2. Sets the track layout to that venue's **primary layout** (the default configuration).
 3. Marks the layout as **unconfirmed**, triggering the layout verification badge (see below).
-4. Stores the MA event's unique ID so duplicate imports are prevented — if two drivers join the same MA event, only one event record is created and both drivers link to it.
+4. Stores the MA event's unique ID so duplicate imports are prevented. If two drivers join the same MA event, only one event record is created and both drivers link to it.
 
 MA events **cannot be edited or deleted** by users.
 
@@ -36,8 +36,8 @@ Only the event creator or an admin can confirm the layout. If you are not the cr
 
 The **Find Events** tab auto-populates the **State** filter from your profile's home state. You can override it:
 
-- **State** — select any Australian state or territory. Events that span multiple states (for example, combined NSW/ACT or SA/NT rounds) may appear under either state depending on how MA has categorised them.
-- **Discipline** — filter to a specific racing discipline such as circuit racing, motorkhana, hill climb, or rally.
+- **State**: select any Australian state or territory. Events that span multiple states (for example, combined NSW/ACT or SA/NT rounds) may appear under either state depending on how MA has categorised them.
+- **Discipline**: filter to a specific racing discipline such as circuit racing, motorkhana, hill climb, or rally.
 
 > **NSW/ACT and SA/NT grouping:** The Motorsport Australia calendar groups some state regions together. An event that appears under *NSW/ACT* in the filter will show events for both New South Wales and the Australian Capital Territory.
 

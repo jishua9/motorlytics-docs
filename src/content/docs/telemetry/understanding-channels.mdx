@@ -5,16 +5,16 @@ sidebar:
   order: 2
 ---
 
-Telemetry analysis is available on **Pro and Team** plans.
+Telemetry analysis is included with your Motorlytics subscription.
 
 After a successful import the **Laps** sub-tab shows the **Data Channels** card alongside the session summary. It gives you an instant picture of which sensors recorded data and which were absent from your logger file.
 
 ## The Data Channels card
 
-The card header shows a count in the form **X / 19** — the number of channels present in this session out of the 19 normalized channels Motorlytics recognises. Below the count, coloured dots represent each channel group:
+The card header shows a count in the form **X / 19**: the number of channels present in this session out of the 19 normalized channels Motorlytics recognises. Below the count, coloured dots represent each channel group:
 
-- **Green dot** — channel data is present in the uploaded file.
-- **Grey dot** — channel was not found in the file.
+- **Green dot**: channel data is present in the uploaded file.
+- **Grey dot**: channel was not found in the file.
 
 Click **View details** to expand the card and see every channel by name with its unit (e.g. `Speed (km/h)`, `Oil Temp (°C)`). Click **Hide details** to collapse it again.
 
@@ -38,7 +38,7 @@ Channels are organised into four groups:
 | `brakeFront` | Brake Front | % or PSI |
 | `brakeRear` | Brake Rear | % or PSI |
 | `steeringAngle` | Steering | ° |
-| `gear` | Gear | — |
+| `gear` | Gear | dimensionless |
 
 ### Engine
 
@@ -65,16 +65,16 @@ Channels are organised into four groups:
 
 Motorlytics only shows analysis tools for channels that are actually present in the uploaded data:
 
-- **Charts tab** — channel selector pills appear only for channels with data. If your logger does not record RPM, the RPM pill is hidden.
-- **Session Health tab** — gauge cards for Oil Temp, Oil Pressure, Coolant Temp, Lambda, Battery Voltage, etc. only render when the corresponding channel is present. If no engine channels are found at all, the Analysis tab shows "No engine data available for session health analysis".
-- **G-G diagram** — only displays when `gLat` or `gLon` channels are present.
-- **Driver inputs** — Throttle, Brake, and Steering charts only appear when those channels have data.
+- **Charts tab**: channel selector pills appear only for channels with data. If your logger does not record RPM, the RPM pill is hidden.
+- **Session Health tab**: gauge cards for Oil Temp, Oil Pressure, Coolant Temp, Lambda, Battery Voltage, etc. only render when the corresponding channel is present. If no engine channels are found at all, the Analysis tab shows "No engine data available for session health analysis".
+- **G-G diagram**: only displays when `gLat` or `gLon` channels are present.
+- **Driver inputs**: Throttle, Brake, and Steering charts only appear when those channels have data.
 
 This means two sessions at the same track will look different in the Analysis views if one was recorded with a full wiring loom and one with a basic speed/GPS logger.
 
 ## Channel normalization
 
-MoTeC channel names like `Ground Speed`, `Engine RPM`, and `Oil Temp` are automatically mapped to the normalized names above during import. You do not need to rename channels in your logger software. If a channel is not recognized by the normalizer, it is silently dropped — the Data Channels card will show it as unavailable.
+MoTeC channel names like `Ground Speed`, `Engine RPM`, and `Oil Temp` are automatically mapped to the normalized names above during import. You do not need to rename channels in your logger software. If a channel is not recognized by the normalizer, it is silently dropped and the Data Channels card will show it as unavailable.
 
 ## Related
 

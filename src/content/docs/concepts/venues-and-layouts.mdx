@@ -5,16 +5,16 @@ sidebar:
   order: 2
 ---
 
-A venue like Sydney Motorsport Park can be driven in multiple configurations — Gardner GP, Brabham, Druitt, Amaroo — and each one is a fundamentally different circuit with a different lap length. Motorlytics models this split explicitly so lap-time comparisons and personal bests are always apples-to-apples.
+A venue like Sydney Motorsport Park can be driven in multiple configurations (Gardner GP, Brabham, Druitt, Amaroo) and each one is a fundamentally different circuit with a different lap length. Motorlytics models this split explicitly so lap-time comparisons and personal bests are always apples-to-apples.
 
 ## Tracks and TrackLayouts
 
 Every circuit in Motorlytics is represented by two separate records:
 
-- **Track** — the physical venue. Holds the venue name, location, GPS coordinates for weather lookup, and timezone. Sydney Motorsport Park is one `Track` record regardless of how many configurations it has.
-- **TrackLayout** — a specific configuration of that venue. Holds the layout name, lap length in kilometres, number of turns, direction (clockwise / counter-clockwise), and the start/finish GPS coordinates used for automatic lap detection. Each layout belongs to exactly one `Track`.
+- **Track**: the physical venue. Holds the venue name, location, GPS coordinates for weather lookup, and timezone. Sydney Motorsport Park is one `Track` record regardless of how many configurations it has.
+- **TrackLayout**: a specific configuration of that venue. Holds the layout name, lap length in kilometres, number of turns, direction (clockwise / counter-clockwise), and the start/finish GPS coordinates used for automatic lap detection. Each layout belongs to exactly one `Track`.
 
-When you create an event you pick a `TrackLayout`, not just a venue. This means a race meeting run on the Gardner GP configuration is permanently linked to that layout, and sessions from a separate meeting on the Druitt layout are kept completely separate. Career best-lap records, corner analysis, and telemetry aggregations all key on layout ID — different configurations never compete with each other.
+When you create an event you pick a `TrackLayout`, not just a venue. This means a race meeting run on the Gardner GP configuration is permanently linked to that layout, and sessions from a separate meeting on the Druitt layout are kept completely separate. Career best-lap records, corner analysis, and telemetry aggregations all key on layout ID, so different configurations never compete with each other.
 
 ## The Layout Lifecycle
 
@@ -38,7 +38,7 @@ Venues that are no longer operating (for example Wakefield Park, which closed in
 
 ## Hand-Curated Australian Catalog
 
-Motorlytics ships with 18 Australian permanent circuits and approximately 30 raceable layouts seeded out of the box. Multi-configuration venues are modelled in full — Sydney Motorsport Park, The Bend, Calder Park, Winton, Queensland Raceway, and Morgan Park all have their individual configurations listed as separate layouts in the picker.
+Motorlytics ships with 18 Australian permanent circuits and approximately 30 raceable layouts seeded out of the box. Multi-configuration venues are modelled in full: Sydney Motorsport Park, The Bend, Calder Park, Winton, Queensland Raceway, and Morgan Park all have their individual configurations listed as separate layouts in the picker.
 
 ## Related
 - [How Motorlytics is Organized](/concepts/how-motorlytics-is-organized/)

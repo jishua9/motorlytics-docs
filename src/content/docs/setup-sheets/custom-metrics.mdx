@@ -5,19 +5,17 @@ sidebar:
   order: 3
 ---
 
-Custom metrics let you add fields that are not covered by the built-in metric library. Once created, a custom metric appears in the Metrics Sidebar of the template editor and can be dragged into any of your custom templates. Custom metrics are available on the **Pro** and **Team** tiers.
+Custom metrics let you add fields that are not covered by the built-in metric library. Once created, a custom metric appears in the Metrics Sidebar of the template editor and can be dragged into any of your custom templates. Custom metrics are included with your Motorlytics subscription.
 
-:::note[Tier limits]
-- **Pro** — up to 25 custom metrics
-- **Team** — up to 50 custom metrics
-- **Amateur** — predefined metrics only
+:::note[Plan limit]
+Your subscription includes up to **25 custom metrics**. When you reach this limit you will be prompted to delete an existing metric before creating a new one.
 :::
 
 ## Creating a custom metric
 
 You can create a metric from within the template editor, or from the **Create Custom Metric** dialog accessible from the Metrics Sidebar.
 
-1. Open the template editor at `/setup/configure` (via the car's **Setup** tab → edit a custom template).
+1. Open the template editor at `/setup/configure` (via the car's **Setup** tab, then edit a custom template).
 2. In the Metrics Sidebar, click **+ Create Metric**.
 3. The **Create Custom Metric** dialog opens. Fill in the fields:
 
@@ -47,9 +45,9 @@ For the **Dropdown** type, enter each option on a separate line in the **Options
 
 When the data type is **Number**, you can optionally set:
 
-- **Min** — the lowest acceptable value (input turns red below this)
-- **Max** — the highest acceptable value
-- **Required** — forces the driver to fill in the field before saving the session
+- **Min**: the lowest acceptable value (input turns red below this)
+- **Max**: the highest acceptable value
+- **Required**: forces the driver to fill in the field before saving the session
 
 Validation rules are enforced in the setup entry form during a session.
 
@@ -69,15 +67,13 @@ To edit: open the template editor, locate the metric in the sidebar, click the e
 
 A metric can only be deleted if it is not currently used in any template. Remove it from all templates first, then delete it from the metrics list. Deletion decrements your custom metric count.
 
-## Team metrics
+## Team metrics (coming soon)
 
-On the **Team** tier, metrics can be created at the team level. Team metrics are visible to all team members and count toward the team's 50-metric limit rather than an individual's.
-
-To create a team metric, select your team from the team selector before opening the **Create Custom Metric** dialog.
+Shared team-level metrics (visible to all team members) are a coming soon feature and are not yet available.
 
 ## Related
 
 - [Custom Templates](/setup-sheets/custom-templates/)
 - [Corner-Based Metrics](/setup-sheets/corner-based-metrics/)
-- [Subscription Tiers](/concepts/subscription-tiers/)
-- [Teams — Shared Resources](/teams/shared-resources/)
+- [Your Subscription](/concepts/subscription-tiers/)
+- [Plan Limits](/subscriptions/feature-limits/)

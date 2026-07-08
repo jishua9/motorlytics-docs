@@ -13,7 +13,7 @@ Motorlytics tracks every part on your race car against the car's racing odometer
 2. Click **Add Part**.
 3. Enter the **Part Name** (e.g., Engine Oil, Brake Pads, Gearbox) and choose a **Category** (Engine, Transmission, Suspension, Brakes, Tyres, Fluids, Electrical, Chassis, or Other).
 4. Set the **Installation Date** using the date picker.
-5. Enter **Lifespan (KM)** — the total kilometres the part is expected to last.
+5. Enter **Lifespan (KM)**: the total kilometres the part is expected to last.
 6. Optionally set an **Expires On** date for time-sensitive parts such as brake fluid or coolant.
 7. Expand **More Details** to add **Brand**, **Part Number**, **Cost ($)**, and **Notes**.
 8. Click **Add Part**.
@@ -36,9 +36,9 @@ If you also set an **Expires On** date, Motorlytics calculates a time-based perc
 
 | % Used | Status |
 |--------|--------|
-| 0–69% | Healthy |
-| 70–89% | Monitor |
-| 90–99% | Replace Soon |
+| 0 to 69% | Healthy |
+| 70 to 89% | Monitor |
+| 90 to 99% | Replace Soon |
 | 100%+ | Overdue |
 
 These thresholds are fixed. Adjust your **Lifespan (KM)** value to tune when warnings appear for your specific parts.
@@ -47,7 +47,7 @@ These thresholds are fixed. Adjust your **Lifespan (KM)** value to tune when war
 
 If you are fitting a part that already has some kilometres on it, enable the **Used Part** toggle in the Add Part dialog. Enter the **Prior KM on Part** (how many kilometres are already on the part). Motorlytics will back-calculate the effective Installation KM so the lifecycle counter starts at the correct percentage.
 
-**Prior Part KM requires a Pro or Team subscription.**
+**Prior Part KM is included with your Motorlytics subscription.**
 
 ## Replacing a part
 
@@ -55,9 +55,9 @@ When a part reaches end of life, open its row in the Parts panel (three-dot menu
 
 1. Archives the old part and records it in the replacement chain.
 2. Creates a new part record with reset lifecycle, using the car's current Racing KM as the new Installation KM.
-3. Preserves the same Part Name and lifespan by default — edit them if the replacement spec differs.
+3. Preserves the same Part Name and lifespan by default. Edit them if the replacement spec differs.
 
-If fitting a used replacement, enable **Used Replacement** and enter **Prior KM on Replacement** to start the new part's lifecycle at the right point (Pro/Team only).
+If fitting a used replacement, enable **Used Replacement** and enter **Prior KM on Replacement** to start the new part's lifecycle at the right point.
 
 ### Replacement chains
 

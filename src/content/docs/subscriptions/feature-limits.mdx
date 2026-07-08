@@ -1,62 +1,58 @@
 ---
-title: Feature Limits
-description: Exact per-tier limits on cars, custom metrics, and custom templates, and what happens when you reach them.
+title: Plan Limits
+description: The enforced limits on cars, custom metrics, and custom templates, and what happens when you reach them.
 sidebar:
   order: 3
 ---
 
-Motorlytics enforces per-tier limits on a few key resources. This page lists those limits and explains what happens when you hit them.
+Motorlytics enforces limits on a few key resources. This page lists those limits and explains what happens when you hit them. There is one plan and no higher tier to upgrade to, so when you reach a limit you will be prompted to remove or replace an existing item.
 
-## Limits by tier
+## Plan limits
 
-| Resource | Amateur | Pro | Team |
-|----------|:-------:|:---:|:----:|
-| Cars | 2 | 3 | Unlimited |
-| Custom Metrics | 5 | 25 | 50 |
-| Custom Setup Templates | 1 | 5 | 20 |
+| Resource | Limit |
+|----------|:-----:|
+| Cars | 3 |
+| Custom Metrics | 25 |
+| Custom Setup Templates | 5 |
 
-**Cars** — The count includes all active (non-archived) cars owned by your account. Team members on the Team tier share a single pool of team-owned cars; those do not count against your personal car total.
+**Cars**: The count includes all active (non-archived) cars owned by your account.
 
-**Custom Metrics** — Metrics you create yourself under **Setup Sheets → Metrics**. The predefined metrics library is not counted against this limit.
+**Custom Metrics**: Metrics you create yourself under **Setup Sheets → Metrics**. The predefined metrics library is not counted against this limit.
 
-**Custom Setup Templates** — Templates you create yourself under **Setup Sheets → Templates**. Predefined (system) templates are not counted.
+**Custom Setup Templates**: Templates you create yourself under **Setup Sheets → Templates**. Predefined (system) templates are not counted.
 
 ## What happens when you reach a limit
 
 ### Cars
 
-When you have reached your car limit and try to add another car, the **Add Car** form displays a banner:
+When you have reached your car limit (3) and try to add another car, the **Add Car** form displays a banner:
 
-> You've reached your car limit (X/X). Upgrade to Team for unlimited cars.
+> You've reached your car limit (3/3). Archive an existing car to add a new one.
 
-The **Save** button remains disabled until you either upgrade or archive an existing car.
+The **Save** button remains disabled until you archive an existing car.
 
 ### Custom Metrics
 
-When you have reached your custom metric limit and try to create a new metric, the server returns an error:
+When you have reached your custom metric limit (25) and try to create a new metric, the server returns an error:
 
-> Custom metric limit reached (X). Upgrade to create more.
+> Custom metric limit reached (25). Delete an existing custom metric to create a new one.
 
-The metric is not saved. You must either upgrade or delete an existing custom metric before creating a new one.
+The metric is not saved. You must delete an existing custom metric before creating a new one.
 
 ### Custom Setup Templates
 
-When you have reached your custom template limit and try to create a new template, the server returns an error:
+When you have reached your custom template limit (5) and try to create a new template, the server returns an error:
 
-> Custom template limit reached (X). Upgrade to create more.
+> Custom template limit reached (5). Delete an existing custom template to create a new one.
 
-The template is not saved. You must either upgrade or delete an existing custom template.
+The template is not saved. You must delete an existing custom template before creating a new one.
 
 ## Checking your current usage
 
-Go to **Settings → Subscription**. The current plan card shows your tier. Your usage relative to limits is also surfaced inline when you open the **Add Car** form — it displays your current count versus the tier cap.
-
-## Upgrading to increase limits
-
-See [Upgrading Your Plan](/subscriptions/upgrading/) for the steps to move from Amateur to Pro, or contact support to arrange a Team subscription.
+Go to **Settings → Subscription**. Your usage relative to limits is also surfaced inline when you open the **Add Car** form, showing your current count versus the cap.
 
 ## Related
-- [Tier Comparison](/subscriptions/tier-comparison/)
-- [Upgrading Your Plan](/subscriptions/upgrading/)
+- [What's Included](/subscriptions/tier-comparison/)
+- [Subscribing and Billing](/subscriptions/upgrading/)
 - [Custom Metrics](/setup-sheets/custom-metrics/)
 - [Custom Templates](/setup-sheets/custom-templates/)

@@ -5,7 +5,7 @@ sidebar:
   order: 6
 ---
 
-Session Health is available on **Pro and Team** plans and requires engine/health channels in the uploaded file. The view is only shown when at least one health channel is present — if your file contains GPS and speed data only, the Analysis tab shows "No engine data available for session health analysis".
+Session Health is included with your Motorlytics subscription and requires engine/health channels in the uploaded file. The view is only shown when at least one health channel is present. If your file contains GPS and speed data only, the Analysis tab shows "No engine data available for session health analysis".
 
 ## Accessing the Session Health view
 
@@ -23,7 +23,7 @@ The banner in the top-right of the section shows one of two states:
 | **All parameters normal** (green) | Every channel with data is within its normal operating range |
 | **X parameters outside range** (amber) | One or more channels exceeded a warning threshold during the session |
 
-The count reflects all laps combined — a single spike in any channel during any lap is enough to trigger the warning.
+The count reflects all laps combined. A single spike in any channel during any lap is enough to trigger the warning.
 
 ## Engine RPM card
 
@@ -32,8 +32,8 @@ Shows **Peak RPM** (the highest single RPM value recorded) and the average. Belo
 | Band | Colour |
 |------|--------|
 | < 3,000 rpm | Green |
-| 3,000 – 5,000 rpm | Blue |
-| 5,000 – 6,500 rpm | Amber |
+| 3,000 to 5,000 rpm | Blue |
+| 5,000 to 6,500 rpm | Amber |
 | > 6,500 rpm | Red |
 
 Each bar is labelled with the percentage of total time spent in that band.
@@ -57,7 +57,7 @@ Each engine health sensor that has data gets its own card showing **Min**, **Max
 
 ### Water Temperature
 
-_(Labelled "Water Temperature" in the UI — also referred to as coolant temp.)_
+_(Labelled "Water Temperature" in the UI, also referred to as coolant temp.)_
 
 | Condition | Threshold | Badge |
 |-----------|-----------|-------|
@@ -71,7 +71,7 @@ _(Labelled "Water Temperature" in the UI — also referred to as coolant temp.)_
 | Rich mixture | Avg < **0.9 λ** | RICH |
 | Lean mixture | Avg > **1.1 λ** | LEAN |
 
-The target lambda is **1.0** with a tolerance of **±0.1**. Note that this is an overall session average — brief off-throttle lean spikes are normal and will not trigger the warning by themselves.
+The target lambda is **1.0** with a tolerance of **±0.1**. Note that this is an overall session average. Brief off-throttle lean spikes are normal and will not trigger the warning by themselves.
 
 ### Battery Voltage
 

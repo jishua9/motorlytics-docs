@@ -5,12 +5,12 @@ sidebar:
   order: 3
 ---
 
-Corner analysis is available on **Pro and Team** plans. Corners must be defined for the track layout by an admin before the table populates.
+Corner analysis is included with your Motorlytics subscription. Corners must be defined for the track layout by an admin before the table populates.
 
 The corner analysis table appears in two places:
 
-- **Lap Delta tab** — scroll below the delta and speed charts to find the **Corner-by-Corner Analysis** section.
-- **Track Map tab** — open the data panel and select the **Corners** tab.
+- **Lap Delta tab**: scroll below the delta and speed charts to find the **Corner-by-Corner Analysis** section.
+- **Track Map tab**: open the data panel and select the **Corners** tab.
 
 ## Reading the table
 
@@ -19,7 +19,7 @@ Each row is one corner. Columns are grouped by lap, with four sub-columns per la
 | Sub-column | What it shows |
 |------------|---------------|
 | **Entry** | Average speed (km/h) across the first three GPS points in the corner zone |
-| **Min** | Minimum speed (km/h) reached anywhere in the corner — the apex speed |
+| **Min** | Minimum speed (km/h) reached anywhere in the corner (the apex speed) |
 | **Exit** | Average speed (km/h) across the last three GPS points in the corner zone |
 | **Time** | Total time (seconds) spent inside the corner zone |
 
@@ -35,7 +35,7 @@ When a reference lap is set, the **Time** column for every other lap gains a del
 The legend below the table reads: **Faster than reference** (green) and **Slower than reference** (red). All speeds are in km/h.
 
 :::note[Screenshot]
-_Placeholder — capture the Corner-by-Corner Analysis table with at least two laps selected and a reference lap set, showing green/red delta indicators._
+_Placeholder: capture the Corner-by-Corner Analysis table with at least two laps selected and a reference lap set, showing green/red delta indicators._
 :::
 
 ## Selecting laps for comparison
@@ -52,7 +52,7 @@ If the table shows "Track information not available", the session's event is not
 
 Corners are defined by an admin clicking entry and exit points on the GPS map for each turn. The system uses Haversine distance calculations to convert GPS coordinates into cumulative track distances (metres from start/finish). During analysis, each GPS trace point is matched to the nearest corner zone and the entry/apex/exit speeds are extracted from that slice of the trace.
 
-Because corners belong to a specific **track layout**, analysis stays accurate when a venue runs different configurations (e.g. Sydney Motorsport Park Gardner GP vs Brabham) — corners from one layout never bleed into another.
+Because corners belong to a specific **track layout**, analysis stays accurate when a venue runs different configurations (e.g. Sydney Motorsport Park Gardner GP vs Brabham). Corners from one layout never bleed into another.
 
 ## Related
 
