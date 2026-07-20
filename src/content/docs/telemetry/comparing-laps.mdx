@@ -21,9 +21,7 @@ The **lap selector panel** floats over the left edge of the chart area. It lists
 
 Each comparison lap is assigned a colour (blue, red, green, amber, purple) that is used consistently across all charts on this tab.
 
-:::note[Screenshot]
-_Placeholder: capture the Lap Delta tab with a reference lap and two comparison laps selected, showing the delta chart and speed chart._
-:::
+With a reference lap and two comparison laps selected, the lap selector panel lists all three with their times, and the delta and speed charts below fill with one line per comparison lap, each in its assigned colour.
 
 ## Delta chart
 
@@ -36,9 +34,13 @@ The upper chart is headed **Delta (seconds) vs Lap X** where X is the reference 
 
 The horizontal axis is lap distance (normalized). A dashed zero reference line sits at the centre.
 
+**How to read it**: a line that climbs steadily through a section means the comparison lap is losing time there, relative to the reference, at roughly the rate of the slope. A line that falls means it is gaining time. A flat section means the two laps are running at the same pace, neither gaining nor losing. Sharp steps usually line up with braking zones or corner exits, so a step upward right after a braking marker on the speed chart below tells you the comparison lap braked earlier or lost time on corner exit at that point.
+
 ## Speed chart
 
 Below the delta chart is a **Speed (km/h)** chart showing the speed traces for all selected laps. The reference lap is drawn as a **dashed grey line**; comparison laps are drawn as solid coloured lines. This lets you see exactly where speed differences arise: earlier braking, slower apex speeds, or slower acceleration out of a corner.
+
+**Reading the pair together**: line up a rising step on the delta chart with the same distance point on the speed chart. If the comparison lap's solid line drops below the dashed reference line earlier than expected, the driver braked too early or scrubbed speed before the corner. If the solid line sits below the dashed line through the apex, the corner speed itself was lower, look at Corner Analysis for the exact entry, min, and exit numbers. If the solid line lags the dashed line coming out of the corner even though apex speed matched, the loss is in throttle application on exit rather than the corner itself, worth checking against the Driver Inputs throttle trace for that lap.
 
 ## Zooming
 

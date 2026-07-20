@@ -59,24 +59,29 @@ Six metric cards fill the lower half of the Weather Forecast panel:
 
 The **Track Wind** card sits below Weather Forecast and overlays current wind speed and direction directly on the track map image for the circuit layout. This lets you read wind relative to the circuit's orientation at a glance, for example whether the headwind is on the main straight or on a key corner entry.
 
-:::note[Screenshot]
-_Placeholder: capture the Track Wind card showing the wind arrow overlaid on the circuit map here._
-:::
+The header above the diagram states the reading in plain terms first: a speed in km/h and, underneath it, "from" followed by the cardinal bearing the wind is coming from (e.g. "from NE"). When the track has a map image set, a set of arrows is drawn faintly over it, spread across the circuit and all rotated to the current wind direction, so you can see the wind's orientation against the actual shape of the track rather than an abstract compass. If no track map is available, the card falls back to a simple compass showing the same arrows against N, S, E, and W markers.
+
+**How to read it**: start from the "from [bearing]" text, that is the direction the wind is coming from. To work out whether a given straight has a headwind or tailwind, compare that bearing to the direction the car travels on that straight: if the car is driving roughly toward the bearing the wind is coming from, it is a headwind; if it is driving away from that bearing, it is a tailwind. A headwind on the fastest straight costs top speed and is worth a lower-drag setup change if it is forecast to hold for the session; a tailwind there does the opposite, so a straight-line speed trap number from that session should not be read as representative. A strong crosswind into a high-speed corner can unsettle the car mid-corner and is worth flagging in the pre-session briefing even if it does not show up in the lap time.
+
+A strip below the diagram labelled **Light** at one end and **Strong** at the other holds three dots that light up green, amber, then red as wind speed crosses roughly 15 km/h and 30 km/h, giving you a rough-and-ready severity read without doing the maths on the exact figure.
 
 ## Rain Radar
 
 The right 60 % of the Weather tab is the **Rain Radar**, an animated map centred on the track showing rain intensity data from RainViewer.
 
-:::note[Screenshot]
-_Placeholder: capture the Rain Radar map with the playback controls visible and at least one rain cell on screen here._
-:::
+### Reading the radar colours
+
+Rain cells are shaded on a standard intensity scale: light blue or green patches are drizzle or light rain, yellow and orange are moderate rain, and red through to purple or magenta are the heaviest, most intense cells. A cell with no colour, just the base map, means no rain is being detected there at that frame. The track's own position is marked on the map so you can judge distance and direction from the circuit at a glance rather than reading map coordinates.
 
 ### Playing the animation
 
-The radar loads both past and forecast (nowcast) frames. Use the controls at the bottom of the map to:
-- **Play / Pause**: start or stop the loop
-- **Scrub**: drag the timeline slider to a specific frame
-- Frame timestamps are shown in local time (HH:MM, 24-hour)
+The radar loads both past and forecast (nowcast) frames into a single timeline and starts playing automatically once the data has loaded, looping from the oldest frame back to the start. Use the controls at the bottom of the map to:
+- **Play / Pause**: start or stop the loop.
+- **Scrub**: drag the timeline slider to jump straight to a specific frame.
+- A **yellow marker** on the timeline marks the boundary between past (observed) frames and forecast frames. Frames past that marker are forecast: the time readout turns yellow and shows an **FCST** badge next to it so you always know whether you are looking at what already happened or a prediction.
+- Frame timestamps are shown in local time (HH:MM, 24-hour).
+
+**How to use it for a call**: play the loop through a couple of cycles and watch whether cells are drifting toward the track marker or away from it, and how fast they are covering ground frame to frame. Each frame is roughly 10 minutes apart, so if a cell is two or three frames away from the track and moving steadily toward it, rain is roughly 20 to 30 minutes out. Scrub into the forecast (FCST) frames to see whether the cell is expected to strengthen, weaken, or miss the circuit entirely before you decide whether it is worth calling cars in for wets.
 
 ### Switching the map theme
 
