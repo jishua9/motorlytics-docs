@@ -1,0 +1,293 @@
+/**
+ * Motorlytics brand theme for Starlight.
+ *
+ * Source of truth: DESIGN.md and PRODUCT.md in the Motorlytics app repo.
+ * North star: "The Race Engineer's Laptop". Dark, tonally layered carbon,
+ * one signal orange marking the live action.
+ *
+ * Colour strategy: Restrained. Signal Orange carries links, active navigation
+ * and focus only (the One Orange Rule). The F1 timing colours (purple, green,
+ * red) are deliberately absent from this theme: they mean fastest, improved
+ * and slower, and must always sit beside the number they describe.
+ *
+ * Deliberate deviation from DESIGN.md: body text runs at Starlight's 1rem
+ * rather than the app's 0.875rem. The app sizes for pitwall density; docs are
+ * long-form reading, and the Sunlight Test favours the larger size here.
+ */
+
+:root {
+	/* Brand palette */
+	--mx-signal-orange: #ff8800;
+	--mx-orange-worn: #e0a057;
+	/* Light-theme link text. Signal Orange is only 2.4:1 on white, so it
+	   deepens here. Verified AA on every light surface: 5.5:1 on #ffffff,
+	   5.1:1 on the #f5f7fa sidebar, 4.6:1 on the #e9ecef inline-code fill. */
+	--mx-orange-deep: #a35400;
+	--mx-pit-black: #010409;
+	--mx-night-carbon: #0d1117;
+	--mx-panel-graphite: #1b2129;
+	--mx-data-white: #f5f5f6;
+	--mx-readout-grey: #b5b9bd;
+	--mx-label-grey: #9d9d9d;
+	--mx-border-steel: #686868;
+
+	/* Status colours (dark theme values) */
+	--mx-status-success: #4caf50;
+	--mx-status-warning: #ff9800;
+	--mx-status-error: #ff5252;
+
+	/* Typography roles: geometric display, humanist body, mono for measured values */
+	--mx-font-display: 'Outfit Variable', 'Outfit', sans-serif;
+	--sl-font: 'DM Sans Variable', 'DM Sans', -apple-system, 'Segoe UI', sans-serif;
+	--sl-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+	/* The one expressive shadow in the system */
+	--mx-action-glow: 0 4px 12px rgba(255, 136, 0, 0.3);
+	--mx-focus-ring: rgba(255, 136, 0, 0.5);
+}
+
+/* ---------------------------------------------------------------
+   Dark theme: the brand default
+   Layer ladder: Pit Black beneath, Night Carbon working surface,
+   Panel Graphite raised, every layer split by a 1px steel line.
+   --------------------------------------------------------------- */
+:root,
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #3a2205;
+	--sl-color-accent: var(--mx-signal-orange);
+	--sl-color-accent-high: var(--mx-signal-orange); /* 7.9:1 on Night Carbon */
+
+	--sl-color-white: var(--mx-data-white);
+	--sl-color-gray-1: var(--mx-data-white);
+	--sl-color-gray-2: var(--mx-readout-grey);
+	--sl-color-gray-3: var(--mx-label-grey);
+	--sl-color-gray-4: var(--mx-border-steel);
+	--sl-color-gray-5: var(--mx-panel-graphite);
+	--sl-color-gray-6: #151b23;
+	--sl-color-black: var(--mx-night-carbon);
+
+	--sl-color-bg: var(--mx-night-carbon);
+	--sl-color-bg-nav: var(--mx-pit-black);
+	--sl-color-bg-sidebar: var(--mx-pit-black);
+	--sl-color-bg-inline-code: var(--mx-panel-graphite);
+	--sl-color-bg-badge: var(--mx-signal-orange);
+
+	--sl-color-text: var(--mx-readout-grey);
+	--sl-color-text-accent: var(--mx-signal-orange);
+	--sl-color-text-invert: var(--mx-pit-black); /* on orange: never white */
+
+	--sl-color-hairline: rgba(104, 104, 104, 0.35);
+	--sl-color-hairline-light: rgba(104, 104, 104, 0.55);
+	--sl-color-hairline-shade: rgba(1, 4, 9, 0.9);
+}
+
+/* ---------------------------------------------------------------
+   Light theme: must hold up on a phone in direct sunlight
+   Signal Orange only reaches 2.4:1 on white, so link text deepens
+   to Worn Ochre while orange fills keep near-black foreground.
+   --------------------------------------------------------------- */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffe9d1;
+	--sl-color-accent: var(--mx-signal-orange);
+	--sl-color-accent-high: var(--mx-orange-deep);
+
+	--sl-color-white: #1a1d21;
+	--sl-color-gray-1: #1a1d21;
+	--sl-color-gray-2: #495057;
+	--sl-color-gray-3: #6c757d;
+	--sl-color-gray-4: #adb5bd;
+	--sl-color-gray-5: #ced4da;
+	--sl-color-gray-6: #e9ecef;
+	--sl-color-gray-7: #f1f3f5;
+	--sl-color-black: #ffffff;
+
+	--sl-color-bg: #ffffff;
+	--sl-color-bg-nav: #f5f7fa;
+	--sl-color-bg-sidebar: #f5f7fa;
+	--sl-color-bg-inline-code: #e9ecef;
+
+	--sl-color-text: #495057;
+	--sl-color-text-accent: var(--mx-orange-deep);
+	--sl-color-text-invert: #1a1d21; /* near-black on orange fills */
+
+	--sl-color-hairline: rgba(73, 80, 87, 0.18);
+	--sl-color-hairline-light: rgba(73, 80, 87, 0.3);
+	--sl-color-hairline-shade: rgba(73, 80, 87, 0.12);
+
+	/* Status colours darken for contrast on a light surface */
+	--mx-status-success: #2e7d32;
+	--mx-status-warning: #ed6c02;
+	--mx-status-error: #d32f2f;
+}
+
+/* ---------------------------------------------------------------
+   Typography
+   Outfit is the display face for headings only. It never appears in
+   buttons, labels, table cells or body copy.
+   --------------------------------------------------------------- */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6,
+.content-panel h1,
+.site-title,
+#starlight__on-this-page,
+.hero h1,
+.hero .tagline {
+	font-family: var(--mx-font-display);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.content-panel h1,
+.hero h1 {
+	text-wrap: balance;
+	color: var(--sl-color-white);
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li {
+	text-wrap: pretty;
+}
+
+.site-title {
+	letter-spacing: -0.02em;
+}
+
+/* Measured values read as mono, the signal that a number came off the car. */
+.sl-markdown-content code {
+	font-variant-ligatures: none;
+}
+
+/* ---------------------------------------------------------------
+   Focus, selection, links
+   --------------------------------------------------------------- */
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+	outline: 3px solid var(--mx-focus-ring);
+	outline-offset: 2px;
+	border-radius: 8px; /* rounded.sm */
+}
+
+::selection {
+	background-color: var(--mx-signal-orange);
+	color: var(--mx-pit-black);
+}
+
+.sl-markdown-content a:not(:where(.not-content *)) {
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 1px;
+}
+
+/* ---------------------------------------------------------------
+   Chrome: the layer ladder, drawn with 1px steel lines
+   --------------------------------------------------------------- */
+.header {
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+#starlight__sidebar,
+.sidebar-pane {
+	border-inline-end: 1px solid var(--sl-color-hairline);
+}
+
+/* Active navigation reads Signal Orange so current location is obvious */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover {
+	color: var(--sl-color-text-accent);
+	background-color: var(--sl-color-accent-low);
+	font-weight: 600;
+}
+
+/* ---------------------------------------------------------------
+   Cards and link cards: 12px radius, steel border, orange on hover
+   --------------------------------------------------------------- */
+.card,
+.sl-link-card {
+	border-radius: 12px;
+	border: 1px solid var(--sl-color-hairline-light);
+	background-color: var(--sl-color-bg-nav);
+	transition: border-color 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sl-link-card:hover {
+	border-color: var(--mx-signal-orange);
+	background-color: var(--sl-color-bg-nav);
+}
+
+.sl-link-card:hover .title {
+	color: var(--sl-color-text-accent);
+}
+
+/* ---------------------------------------------------------------
+   Primary button: Signal Orange fill, Pit Black text, 10px radius.
+   Starlight defaults to a pill with white text in light mode; both
+   break the design system, and Pit Black on orange is 8.3:1 in either
+   theme against white-on-deep-orange's 4.6:1.
+   --------------------------------------------------------------- */
+.sl-link-button.primary,
+.sl-link-button.primary:visited {
+	background-color: var(--mx-signal-orange);
+	border-color: var(--mx-signal-orange);
+	color: var(--mx-pit-black);
+	border-radius: 10px; /* rounded.md */
+	font-weight: 600;
+	transition:
+		background-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sl-link-button.primary:hover,
+.sl-link-button.primary:focus-visible {
+	background-color: var(--mx-orange-worn);
+	border-color: var(--mx-orange-worn);
+	color: var(--mx-pit-black);
+	box-shadow: var(--mx-action-glow);
+}
+
+/* ---------------------------------------------------------------
+   Asides mapped to the status vocabulary, not the timing vocabulary
+   --------------------------------------------------------------- */
+.starlight-aside--tip {
+	--sl-color-asides-text-accent: var(--mx-status-success);
+	--sl-color-asides-border: var(--mx-status-success);
+}
+
+.starlight-aside--caution {
+	--sl-color-asides-text-accent: var(--mx-status-warning);
+	--sl-color-asides-border: var(--mx-status-warning);
+}
+
+.starlight-aside--danger {
+	--sl-color-asides-text-accent: var(--mx-status-error);
+	--sl-color-asides-border: var(--mx-status-error);
+}
+
+/* Note stays neutral steel so orange keeps its meaning */
+.starlight-aside--note {
+	--sl-color-asides-text-accent: var(--sl-color-white);
+	--sl-color-asides-border: var(--mx-border-steel);
+}
+
+/* ---------------------------------------------------------------
+   Logo sizing
+   --------------------------------------------------------------- */
+.site-title img {
+	height: 1.75rem;
+	width: auto;
+}
+
+/* ---------------------------------------------------------------
+   Reduced motion is not optional
+   --------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+	.card,
+	.sl-link-card,
+	.hero .action.primary {
+		transition: none;
+	}
+}
