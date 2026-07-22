@@ -1,0 +1,87 @@
+---
+title: Presets and Baselines
+description: Reuse your setups with saved presets, per-track baselines, and automatic weekend carry-forward.
+sidebar:
+  order: 6
+---
+
+Motorlytics gives you three ways to reuse a setup so you rarely start a session from a blank sheet: **presets** you save on a car, a **baseline** you pin for each track, and automatic **carry-forward** across a race weekend. They work together, so most of the time the right starting setup is already filled in for you.
+
+## Presets
+
+A preset is a named, reusable baseline setup saved on a car, for example "Dry baseline", "Wet baseline", or "Low grip". Each preset is based on one setup sheet (template) and holds a full set of values you can load into any session.
+
+Presets belong to a single car. A preset on your Formula Ford is separate from any preset on another car.
+
+### Creating a preset from the car page
+
+1. Open a car and go to the **Setup** tab.
+2. Switch the left panel from **Templates** to **Presets**.
+3. Click **New preset**.
+4. Give the preset a name and choose the **setup sheet** it is based on. The list includes the included setup sheets as well as any custom templates you have created.
+5. Click **Create preset**, then fill in the values in the form on the right. Changes save automatically.
+
+### Saving a preset from a session
+
+If you have dialled in a good setup during a session, you can save it as a preset without leaving the session:
+
+1. In the session's **Setup Sheet** tab, click the **Save as preset** button in the header.
+2. Give it a name and save.
+
+The preset captures the setup values as they are. Tyres are not included, since they are a consumable rather than part of a baseline.
+
+### Renaming and deleting presets
+
+In the **Presets** list on the car page, hover a preset to reveal its actions:
+
+| Action | What it does |
+|--------|--------------|
+| Rename (pencil) | Change the preset's name |
+| Delete (bin) | Remove the preset permanently |
+| Set as default (star) | Make this the car's default preset |
+
+### Setting a default preset
+
+Click the **star** on a preset to make it the car's default. A **Default** badge appears next to it. Each car has at most one default preset, so setting a new one clears the previous. Click the star again to clear the default.
+
+The default preset is used to seed the first session of a weekend when there is nothing to carry forward and no track baseline pinned (see [How a new session is seeded](#how-a-new-session-is-seeded)).
+
+## Track baselines
+
+A track baseline is your go-to setup for a specific track, pinned from a session you have already run there.
+
+To pin a baseline, open a session at that track and click the **Pin as track baseline** button (the pin icon) in the **Setup Sheet** header. The pin lights up to show that this session is the current baseline for the track.
+
+Each car has one baseline per track. Pinning a different session as the baseline replaces the previous one. Click the pin again to unpin it.
+
+A track baseline points at the session, so if you tidy up that session's setup later, the baseline reflects the change.
+
+## Weekend carry-forward
+
+Within an event, your setup is usually much the same from one session to the next. So when you add a session and there is already an earlier session for that car in the same event, Motorlytics automatically starts the new session from a copy of the previous session's setup. You then tweak from there.
+
+The copy is taken when the session is created, so editing one session never changes another. Your tyre selection is not carried across; you pick tyres fresh each session.
+
+## How a new session is seeded
+
+When you add a session, its setup is filled in automatically using the first of these that applies:
+
+1. **Carry-forward** from the most recent earlier session that weekend.
+2. Otherwise, the **track baseline** pinned for that car and track.
+3. Otherwise, the car's **default preset**.
+4. Otherwise, a **blank sheet**.
+
+There is nothing to choose at session-creation time. If you want a different starting point on a particular session, load a preset or the baseline from inside the session (see below).
+
+## Loading a preset or baseline into a session
+
+The **Setup History** panel on the left of a session's setup sheet lists your track baseline and presets above the past-sessions history. Each has a **Load** button.
+
+**Load** replaces the current setup with that preset or baseline. It asks you to confirm first, and it keeps your current tyre selection. This is different from **Copy** on a past session, which merges the copied values into your current setup rather than replacing it.
+
+| Gesture | Source | Effect |
+|---------|--------|--------|
+| Load | A preset or the track baseline | Replaces the whole setup, keeps your tyres |
+| Copy | A past session | Merges the values into your current setup |
+
+For more on the history panel and copying from past sessions, see [Setup History](/setup-sheets/setup-history/).
